@@ -1,6 +1,22 @@
-import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
+import { ChakraProvider } from "@chakra-ui/react";
+import { theme } from "../chakra/theme";
+import { useState } from "react";
+import { Router } from "next/router";
+import MainLayout from "@/components/Layout/MainLayout";
+import { AppProps } from "next/app";
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  const [isLoading, setIsLoading] = useState(false);
+
+  Router.events.on("routeChangeStart", () => setIsLoading(true));
+  Router.events.on("routeChangeComplete", () => setIsLoading(false));
+  Router.events.on("routeChangeError", () => setIsLoading(false));
+
+  return (
+    <ChakraProvider theme={theme}>
+      <MainLayout isLoading={isLoading}>
+        <Component {...pageProps} />
+      </MainLayout>
+    </ChakraProvider>
+  );
 }

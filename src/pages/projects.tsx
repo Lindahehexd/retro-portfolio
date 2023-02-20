@@ -1,14 +1,13 @@
-import MMM from "@/components/Card";
 import ContentLayout from "@/components/Layout/ContentLayout";
-import Test from "@/components/Hompage/Test";
+import ProjectCard from "@/components/ProjectPage/ProjectCard";
 
 
-export default function Home() {
+export default function ContactPage() {
   return (
     <>
     <ContentLayout>
       <>
-      <Test/>
+      <ProjectCard/>
       </>
     </ContentLayout>
     </>
