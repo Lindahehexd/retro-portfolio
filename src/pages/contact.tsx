@@ -1,18 +1,22 @@
 import ContactCard from "@/components/ContactPage/ContactCard";
 import ContactTitle from "@/components/ContactPage/ContactTitle";
 import ContentLayout from "@/components/Layout/ContentLayout";
-import { Flex } from "@chakra-ui/react";
+import { Box, Center, Flex } from "@chakra-ui/react";
 
 
 export default function ContactPage() {
   return (
     <>
-      <ContactTitle/>
     <ContentLayout>
       <>
-      <Flex align='center' justify='center' w='100%' bg='pink'> 
+      <Box>
+      <ContactTitle/>
+      <Center h='100%' w='100%'>
       <ContactCard/>
-      </Flex>
+      </Center>
+      </Box>
+      {/* <Flex align='center' justify='center' w='100%' bg='pink'> 
+      </Flex> */}
       </>
     </ContentLayout>
     </>

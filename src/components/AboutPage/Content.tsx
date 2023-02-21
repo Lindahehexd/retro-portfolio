@@ -1,10 +1,20 @@
-import { Flex, VStack, Text, Button } from "@chakra-ui/react";
+import { Flex, VStack, Text, Button, Card, CardHeader, CardBody, CardFooter, } from "@chakra-ui/react";
 import React from "react";
 
 const Content = () => {
   return (
-    <Flex border="3px solid black" boxShadow="7px 7px " ml={5} bg="gray.100" direction="column" borderRadius="lg" w='40%'>
-      <Flex h="30px" w="100%" bg="purple.400"></Flex>
+        
+
+
+<Card  border="3px solid black" boxShadow="7px 7px " bg="orange.200">
+
+{/* window */}
+<Flex bg="teal.300" justify="center">
+            <Text fontSize="xl" fontWeight={600}>
+              關於我
+            </Text>
+          </Flex>
+     <CardBody>
 
       <Flex fontWeight={700} p={4} direction="column">
         {/* 1 */}
@@ -20,7 +30,27 @@ const Content = () => {
             舊網頁
           </Button>
       </Flex>
-    </Flex>
+
+      </CardBody>
+      </Card>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
   );
 };
 

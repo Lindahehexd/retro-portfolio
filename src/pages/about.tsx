@@ -4,19 +4,17 @@ import Content from "@/components/AboutPage/Content";
 import ContentLayout from "@/components/Layout/ContentLayout";
 import { Flex } from "@chakra-ui/react";
 
-
 export default function ContactPage() {
   return (
     <>
-      <AboutTitle/>
-    <ContentLayout>
-      <>
-      <Flex justify='center' gap={5}>
-      <AboutMeBox/>
-      <Content/>
-      </Flex>
-      </>
-    </ContentLayout>
+      <AboutTitle />
+      <ContentLayout>
+        <>
+            {/* <About /> */}
+            <AboutMeBox />
+            {/* <Content /> */}
+        </>
+      </ContentLayout>
     </>
   );
 }

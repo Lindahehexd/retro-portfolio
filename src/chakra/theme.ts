@@ -10,7 +10,7 @@ export const theme = extendTheme({
   styles: {
     global: () => ({
       body: {
-        bg: useColorModeValue("#E4D8B4", "gray.900"),
+        bg: useColorModeValue("#FDC62E", "gray.900"),
         color: useColorModeValue("#282425", "white"),
       },
     }),

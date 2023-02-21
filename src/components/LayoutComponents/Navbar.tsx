@@ -7,24 +7,23 @@ import {
   IconButton,
   Text,
 } from "@chakra-ui/react";
-import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
-import NextLink from "next/link";
 import Link from "next/link";
+import SwitchThemeButton from "./SwitchThemeButton";
 
 export const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
-  const isDark = colorMode === "dark";
   const [display, changeDisplay] = useState("none");
 
   return (
     <>
     <Flex
-      h="80px"
-      bg="#EF9995"
+      h="90px"
+      bg="#ABCCDD"
       justify="space-between"
       align="center"
       px={5}
       flexDirection={{ base: "column", md: "row" }}
+      borderBottom='5px solid black'
     >
       <Text fontSize="4xl" fontWeight={700} >
         Da-Jiun Lin
@@ -68,6 +67,8 @@ export const Navbar = () => {
               聯絡方式
             </Button>
           </Link>
+
+          <SwitchThemeButton/>
 
 
 
