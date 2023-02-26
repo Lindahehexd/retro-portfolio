@@ -6,7 +6,7 @@ const SwitchThemeButton = () => {
 
   return (
     <>
-      <Icon as={GiSun} size="md" alignSelf="center" onClick={toggleColorMode} aria-label="Toggle color mode" />
+      <Icon as={GiSun} fontSize='lg' alignSelf="center" onClick={toggleColorMode} aria-label="Toggle color mode" />
     </>
   );
 };

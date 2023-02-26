@@ -14,7 +14,9 @@ import {
   Icon,
 } from "@chakra-ui/react";
 import { Tag, TagLabel, TagLeftIcon, TagRightIcon, TagCloseButton } from "@chakra-ui/react";
+import Link from "next/link";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
+import Project1Modal from "../Modal/Project1Modal";
 
 const ProjectCard = () => {
   return (
@@ -107,9 +109,11 @@ const ProjectCard = () => {
               <Button boxShadow="4px 4px " bg="gray.100" border="3px solid black" borderRadius="lg" my={5} mr={2}>
                 查看內容
               </Button>
-              <Button boxShadow="4px 4px " bg="gray.100" border="3px solid black" borderRadius="lg" my={5} mr={2}>
-                前往連結
-              </Button>
+              <Link href="https://pttit.vercel.app/">
+                <Button boxShadow="4px 4px " bg="gray.100" border="3px solid black" borderRadius="lg" my={5} mr={2}>
+                  前往連結
+                </Button>
+              </Link>
             </Flex>
           </Card>
 
@@ -144,18 +148,23 @@ const ProjectCard = () => {
               </Box>
 
               <Text fontSize="lg" fontWeight={700}>
-                聊天Go是一個任何人都可進入的公共聊天室，在聊天室中，您可以看到發訊息者的留言時間， 也能看到發訊息者的頭像。本作品主要練習使用firebase以及使用firebase提供的身份驗證方式進行登入。並練習使用Conditional Rendering去渲染明亮模式/黑暗模式的顏色、以及有登入的用戶才可看到聊天室，
+                聊天Go是一個任何人都可進入的公共聊天室，在聊天室中，您可以看到發訊息者的留言時間，
+                也能看到發訊息者的頭像。本作品主要練習使用firebase以及使用firebase提供的身份驗證方式進行登入。並練習使用Conditional
+                Rendering去渲染明亮模式/黑暗模式的顏色、以及有登入的用戶才可看到聊天室，
               </Text>
               {/* <Image src="/aboutme3.png" alt="" objectFit="contain" boxSize="250px" /> */}
             </CardBody>
 
-            <Flex justify="center" gap={6}>
-              <Button boxShadow="4px 4px " bg="gray.100" border="3px solid black" borderRadius="lg" my={5} mr={2}>
+            <Flex justify="center" gap={6} align="center">
+              {/* <Button boxShadow="4px 4px " bg="gray.100" border="3px solid black" borderRadius="lg" my={5} mr={2}>
                 查看內容
-              </Button>
-              <Button boxShadow="4px 4px " bg="gray.100" border="3px solid black" borderRadius="lg" my={5} mr={2}>
-                前往連結
-              </Button>
+              </Button> */}
+              <Project1Modal />
+              <Link href=" https://chat-app-firebase-7rlx.vercel.app/">
+                <Button boxShadow="4px 4px " bg="gray.100" border="3px solid black" borderRadius="lg" my={5} mr={2}>
+                  前往連結
+                </Button>
+              </Link>
             </Flex>
           </Card>
 
@@ -195,16 +204,16 @@ const ProjectCard = () => {
               <Button boxShadow="4px 4px " bg="gray.100" border="3px solid black" borderRadius="lg" my={5} mr={2}>
                 查看內容
               </Button>
-              <Button boxShadow="4px 4px " bg="gray.100" border="3px solid black" borderRadius="lg" my={5} mr={2}>
-                前往連結
-              </Button>
+              <Link href="https://coin-app-one.vercel.app/">
+                <Button boxShadow="4px 4px " bg="gray.100" border="3px solid black" borderRadius="lg" my={5} mr={2}>
+                  前往連結
+                </Button>
+              </Link>
             </Flex>
           </Card>
 
-
-
-          <Card border="3px solid black" boxShadow="7px 7px "  bg="#F4724E" h="100%" maxW="600px">
-            <Flex p={3}  borderBottom="5px solid black" justify="space-between">
+          <Card border="3px solid black" boxShadow="7px 7px " bg="#F4724E" h="100%" maxW="600px">
+            <Flex p={3} borderBottom="5px solid black" justify="space-between">
               <Text fontSize="xl" fontWeight={800}>
                 PROJECT 4
               </Text>
@@ -230,7 +239,8 @@ const ProjectCard = () => {
               </Box>
 
               <Text fontSize="lg" fontWeight={700}>
-                此作品能讓使用者新增代辦事項及刪除完成事項，主要練習React,也同時熟悉Chakra UI的使用方式，並使用Local Storage將資料存在本地空間。
+                此作品能讓使用者新增代辦事項及刪除完成事項，主要練習React,也同時熟悉Chakra UI的使用方式，並使用Local
+                Storage將資料存在本地空間。
               </Text>
               {/* <Image src="/aboutme3.png" alt="" objectFit="contain" boxSize="250px" /> */}
             </CardBody>
@@ -239,17 +249,16 @@ const ProjectCard = () => {
               <Button boxShadow="4px 4px " bg="gray.100" border="3px solid black" borderRadius="lg" my={5} mr={2}>
                 查看內容
               </Button>
-              <Button boxShadow="4px 4px " bg="gray.100" border="3px solid black" borderRadius="lg" my={5} mr={2}>
-                前往連結
-              </Button>
+
+              <Link href="https://todo-list-zeta-jade.vercel.app/">
+                <Button boxShadow="4px 4px " bg="gray.100" border="3px solid black" borderRadius="lg" my={5} mr={2}>
+                  前往連結
+                </Button>
+              </Link>
             </Flex>
           </Card>
 
-
-
-
-
-          <Card border="3px solid black" boxShadow="7px 7px "bg="#ABCCDD" h="100%" maxW="600px"  >
+          <Card border="3px solid black" boxShadow="7px 7px " bg="#ABCCDD" h="100%" maxW="600px">
             <Flex p={3} borderBottom="5px solid black" justify="space-between">
               <Text fontSize="xl" fontWeight={800}>
                 PROJECT 5
@@ -274,10 +283,9 @@ const ProjectCard = () => {
                   </Tag>
                 </HStack>
 
-
                 <Text fontSize="lg" fontWeight={700}>
-                此作品是因應上一份公司的產品需求所開發的小應用程式，可以透過現有標籤紙捲/碳帶來了解該耗材可印刷的總長度及印刷張數，本作品主要練習基本的css以及react的prop傳遞。
-              </Text>
+                  此作品是因應上一份公司的產品需求所開發的小應用程式，可以透過現有標籤紙捲/碳帶來了解該耗材可印刷的總長度及印刷張數，本作品主要練習基本的css以及react的prop傳遞。
+                </Text>
               </Box>
 
               <Text fontSize="lg" fontWeight={700}></Text>
@@ -285,12 +293,14 @@ const ProjectCard = () => {
             </CardBody>
 
             <Flex justify="center" gap={6}>
-              <Button boxShadow="4px 4px " bg="gray.100" border="3px solid black" borderRadius="lg" my={5} mr={2} >
+              <Button boxShadow="4px 4px " bg="gray.100" border="3px solid black" borderRadius="lg" my={5} mr={2}>
                 查看內容
               </Button>
-              <Button boxShadow="4px 4px " bg="gray.100" border="3px solid black" borderRadius="lg" my={5} mr={2}>
-                前往連結
-              </Button>
+              <Link href=" https://media-label-calculator.vercel.app/">
+                <Button boxShadow="4px 4px " bg="gray.100" border="3px solid black" borderRadius="lg" my={5} mr={2}>
+                  前往連結
+                </Button>
+              </Link>
             </Flex>
           </Card>
         </SimpleGrid>

@@ -35,7 +35,7 @@ export const Navbar = () => {
 
 
         <Link href="/" passHref>
-            <Button as="a"  bg='white'   boxShadow="4px 4px " border='3px solid black' borderRadius='lg' aria-label="Home" my={5} mr={2}>
+            <Button   bg='white'   boxShadow="4px 4px " border='3px solid black' borderRadius='lg' aria-label="Home" my={5} mr={2}>
               首頁
             </Button>
           </Link>
@@ -43,27 +43,21 @@ export const Navbar = () => {
 
 
           <Link href="projects" passHref>
-            <Button as="a"  bg='white'   boxShadow="4px 4px " border='3px solid black' borderRadius='lg' aria-label="Home" my={5} mr={2}>
+            <Button  bg='white'   boxShadow="4px 4px " border='3px solid black' borderRadius='lg' aria-label="Home" my={5} mr={2}>
               作品集
             </Button>
           </Link>
 
           <Link href="/about" passHref>
-            <Button as="a"  bg='white'  boxShadow="4px 4px " border='3px solid black'  variant="ghost" aria-label="About" my={5} mr={2}>
+            <Button  bg='white'  boxShadow="4px 4px " border='3px solid black'  variant="ghost" aria-label="About" my={5} mr={2}>
               關於我
             </Button>
           </Link>
 
 
-          <Link href="/timeline" passHref>
-            <Button as="a"  bg='white'   boxShadow="4px 4px " border='3px solid black'  variant="ghost" aria-label="About" my={5} mr={2}>
-              經歷
-            </Button>
-          </Link>
-
 
           <Link href="/contact" passHref>
-            <Button as="a"  bg='white'   boxShadow="4px 4px " border='3px solid black'  variant="ghost" aria-label="About" my={5} mr={2}>
+            <Button  bg='white'   boxShadow="4px 4px " border='3px solid black'  variant="ghost" aria-label="About" my={5} mr={2}>
               聯絡方式
             </Button>
           </Link>

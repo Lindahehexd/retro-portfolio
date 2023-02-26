@@ -1,8 +1,10 @@
-import { Flex, VStack, Text, Heading, SimpleGrid, Box, Button, Card, CardBody, Image } from "@chakra-ui/react";
+import { Flex, VStack, Text, Heading, SimpleGrid, Box, Button, Card, CardBody, Image, Icon } from "@chakra-ui/react";
 import TypeEffect from "./TypeEffect";
 import { Highlight } from "@chakra-ui/react";
 import { Wrap, WrapItem } from "@chakra-ui/react";
 import { RoughNotation } from "react-rough-notation";
+import { AiFillLinkedin, AiFillFacebook, AiFillGithub } from "react-icons/ai";
+import { SiGmail } from "react-icons/si";
 
 interface AnnotatedTextProps {
   text: string;
@@ -79,8 +81,8 @@ const Test = () => {
               </Flex>
             </Flex>
 
-            <Flex justify="center">
-              <Button
+            <Flex justify="center" mt={4} gap={3}>
+              {/* <Button
                 as="a"
                 bg="gray.50"
                 boxShadow="4px 4px "
@@ -90,8 +92,12 @@ const Test = () => {
                 my={5}
                 mr={2}
               >
-                下載履歷
-              </Button>
+              
+              </Button> */}
+              <Icon fontSize={40} as={AiFillLinkedin} />
+          <Icon fontSize={40} as={AiFillFacebook} />
+          <Icon fontSize={40} as={AiFillGithub} />
+          <Icon fontSize={35} as={SiGmail} />
             </Flex>
           </CardBody>
         </Card>
