@@ -5,6 +5,7 @@ import { Wrap, WrapItem } from "@chakra-ui/react";
 import { RoughNotation } from "react-rough-notation";
 import { AiFillLinkedin, AiFillFacebook, AiFillGithub } from "react-icons/ai";
 import { SiGmail } from "react-icons/si";
+import Link from "next/link";
 
 interface AnnotatedTextProps {
   text: string;
@@ -30,6 +31,8 @@ const Test = () => {
           <Flex >
             <Text mt="6" fontWeight="md" fontSize='xl' >
             點選{" "}
+            <Link href='/about'>
+            
               <Button
                 w="20%"
                 bg="gray.50"
@@ -41,7 +44,10 @@ const Test = () => {
               >
                 關於我
               </Button>
+            </Link>
               或是{" "}
+              <Link href='/projects'>
+              
               <Button
                 w="20%"
                 bg="gray.50"
@@ -53,6 +59,7 @@ const Test = () => {
               >
                 作品集
               </Button>{" "}
+              </Link>
               以了解更多
             </Text>
           </Flex>

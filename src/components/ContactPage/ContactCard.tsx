@@ -14,6 +14,15 @@ import {
 import { AiFillFacebook, AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import { SiGmail } from "react-icons/si";
 
+const handleSendMail = () => {
+    window.location.href = `mailto:tkd09152129@gmail.com`;
+  };
+
+
+// https://www.linkedin.com/in/da-jiun-lin-47a5841a1/
+// https://github.com/Lindahehexd
+
+
 const ContactCard = () => {
   return (
     <>
@@ -70,10 +79,9 @@ const ContactCard = () => {
           h="100px"
           gap={5}
         >
-          <Icon fontSize={40} as={AiFillLinkedin} />
-          <Icon fontSize={40} as={AiFillFacebook} />
-          <Icon fontSize={40} as={AiFillGithub} />
-          <Icon fontSize={35} as={SiGmail} />
+          <Icon fontSize={40} as={AiFillLinkedin} cursor='pointer'  />
+          <Icon fontSize={40} as={AiFillGithub} cursor='pointer'  />
+          <Icon fontSize={35} as={SiGmail} onClick={handleSendMail} cursor='pointer' />
         </Card>
       </VStack>
     </>
