@@ -17,47 +17,14 @@ import { Tag, TagLabel, TagLeftIcon, TagRightIcon, TagCloseButton } from "@chakr
 import Link from "next/link";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
 import Project1Modal from "../Modal/Project1Modal";
+import { AiFillGithub } from "react-icons/ai";
+import { IconButton } from '@chakra-ui/react'
 
 const ProjectCard = () => {
   return (
     <>
       <Flex align="center" direction="column" w="100%">
         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} mb={8}>
-          {/* <Card border="3px solid black" boxShadow="7px 7px " ml={5} h="100%">
-            <Flex h="30%" bg="teal.300"></Flex>
-            <CardBody>
-              <Text fontSize="xl" fontWeight={600}>
-                內容內容內容內容內容內容內容內容內容內容內容內容內容
-              </Text>
-            </CardBody>
-            <Flex h="20%" bg="pink.300" align="center" justify="flex-end">
-              <Button as="a" bg="white" border="4px solid black" borderRadius="lg" aria-label="Home" my={5} mr={2}>
-                前往連結
-              </Button>
-              <Button as="a" bg="white" border="4px solid black" borderRadius="lg" aria-label="Home" my={5} mr={2}>
-                查看內容
-              </Button>
-            </Flex>
-          </Card> */}
-
-          {/* 4 */}
-
-          {/* <Card border="3px solid black" boxShadow="7px 7px " ml={5} h="100%">
-            <Flex h="30%" bg="teal.300"></Flex>
-            <CardBody>
-              <Text fontSize="xl" fontWeight={600}>
-                內容內容內容內容內容內容內容內容內容內容內容內容內容
-              </Text>
-            </CardBody>
-            <Flex h="20%" bg="pink.300" align="center" justify="flex-end">
-              <Button as="a" bg="white" border="4px solid black" borderRadius="lg" aria-label="Home" my={5} mr={2}>
-                前往連結
-              </Button>
-              <Button as="a" bg="white" border="4px solid black" borderRadius="lg" aria-label="Home" my={5} mr={2}>
-                查看內容
-              </Button>
-            </Flex>
-          </Card> */}
 
           <Card border="3px solid black" boxShadow="7px 7px " bg="#ABCCDD" h="100%" maxW="600px">
             <Flex p={3} bg="#ABCCDD" borderBottom="5px solid black" justify="space-between">
@@ -113,6 +80,11 @@ const ProjectCard = () => {
                 <Button boxShadow="4px 4px " bg="gray.100" border="3px solid black" borderRadius="lg" my={5} mr={2}>
                   前往連結
                 </Button>
+              </Link>
+              <Link href="https://pttit.vercel.app/">
+                <IconButton boxShadow="4px 4px " bg="gray.100" border="3px solid black" borderRadius="lg" my={5} mr={2}  aria-label='Call Sage'  as={AiFillGithub}>
+                  GitHub
+                </IconButton>
               </Link>
             </Flex>
           </Card>

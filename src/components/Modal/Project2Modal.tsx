@@ -14,7 +14,7 @@ import {
 
 const markdown = `
   # 簡介
-  融合 PTT與Reddit,模擬做出一個新的社交平台。
+  聊天GO主讓
   <br/><br/>
   <p align="center">
   <img src="/profile2.png" alt="image" style="margin: 0 auto;">
