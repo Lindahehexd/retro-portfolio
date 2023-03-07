@@ -1,7 +1,5 @@
-import MMM from "@/components/Card";
 import ContentLayout from "@/components/Layout/ContentLayout";
-import Test from "@/components/Hompage/Test";
-import Footer from "@/components/LayoutComponents/Footer";
+import HomeItem from "@/components/Hompage/Home";
 
 
 export default function Home() {
@@ -9,7 +7,7 @@ export default function Home() {
     <>
     <ContentLayout>
       <>
-      <Test/>
+      <HomeItem/>
       </>
     </ContentLayout>
     </>

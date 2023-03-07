@@ -11,12 +11,12 @@ return (
   <Flex
     justify="center"
     p="16px 0px"
-    border='3px solid red'
+    // border='3px solid red'
     // h='100vh'
   >
     {/* Wrapper */}
     <Flex
-      border="5px solid green"
+    //   border="5px solid green"
       w="100%"
       maxW="1300px"
       p="2"
@@ -27,7 +27,7 @@ return (
         mr={2}
         w='100%'
         // h='100vh'
-        bg='pink'
+        // bg='pink'
         justify='center'
       >
         {children}

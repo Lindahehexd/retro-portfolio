@@ -1,18 +1,23 @@
 import { extendTheme, useColorModeValue } from "@chakra-ui/react";
+import { Button } from "./button";
 
-// 2. Call `extendTheme` and pass your custom values
 export const theme = extendTheme({
   colors: {
     brand: {
       100: "#FF3c00",
     },
   },
+
+//   FDC62E
   styles: {
     global: () => ({
       body: {
-        bg: useColorModeValue("#FDC62E", "gray.900"),
+        bg: useColorModeValue("#F0EFEB", "#333333"),
         color: useColorModeValue("#282425", "white"),
       },
     }),
   },
+  components: {
+    Button,
+  }
 });

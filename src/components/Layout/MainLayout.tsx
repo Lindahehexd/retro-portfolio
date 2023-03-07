@@ -10,7 +10,7 @@ interface LayoutProps {
 }
 
 const Layout = ({ children, isLoading }: LayoutProps) => {
-    const [isClient, setIsClient] = useState(false);
+  const [isClient, setIsClient] = useState(false);
   const router = useRouter();
   const { pathname } = router;
 
@@ -21,18 +21,18 @@ const Layout = ({ children, isLoading }: LayoutProps) => {
   if (!isClient) {
     return null;
   }
- 
 
   return (
     <>
       <Box>
         <Navbar />
-        <Heading>{pathname === '/' && ''}</Heading>
-        {/* <Heading>{pathname === '/about' && '關於我'}</Heading> */}
-        <Heading>{pathname === '/projects' && '作品集'}</Heading>
-        <Heading>{pathname === '/contact' && '聯絡方式'}</Heading>
+        <Center mt={{ base: 6, md: 4 }}>
+          {pathname === "/projects" && <Heading> 作品集</Heading>}
+          {pathname === "/contact" && <Heading> 聯絡方式</Heading>}
+        </Center>
+
         {isLoading && (
-          <Center h="100vh">
+          <Center h="85vh">
             <Spinner />
           </Center>
         )}

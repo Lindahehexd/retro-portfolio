@@ -1,33 +1,22 @@
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Image,
-  Text,
-  Flex,
-  Button,
-  SimpleGrid,
-  HStack,
-  Heading,
-  Box,
-  Icon,
-} from "@chakra-ui/react";
-import { Tag, TagLabel, TagLeftIcon, TagRightIcon, TagCloseButton } from "@chakra-ui/react";
-import Link from "next/link";
+import { Card, CardBody, Text, Flex, Button, SimpleGrid, Icon, useColorModeValue } from "@chakra-ui/react";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
-import Project1Modal from "../Modal/Project1Modal";
 import { AiFillGithub } from "react-icons/ai";
-import { IconButton } from '@chakra-ui/react'
+import Link from "next/link";
+import Project1Modal from "../Modal/Project1Modal";
 
 const ProjectCard = () => {
+  const border = useColorModeValue("3px solid black", "3px solid white");
+  const bg = useColorModeValue("#E1EEDD", "purple.100");
+  const color = useColorModeValue("gray.900", "gray.900");
+  const boxShadow = useColorModeValue("7px 7px black", "7px 7px orange");
+//   ABCCDD
+
   return (
     <>
       <Flex align="center" direction="column" w="100%">
         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} mb={8}>
-
-          <Card border="3px solid black" boxShadow="7px 7px " bg="#ABCCDD" h="100%" maxW="600px">
-            <Flex p={3} bg="#ABCCDD" borderBottom="5px solid black" justify="space-between">
+          <Card boxShadow={boxShadow} bg={bg} h="100%" maxW="600px" color={color} border={border}>
+            <Flex p={3} borderBottom="5px solid black" justify="space-between">
               <Text fontSize="xl" fontWeight={800}>
                 PROJECT 1
               </Text>
@@ -38,31 +27,92 @@ const ProjectCard = () => {
             </Flex>
             {/* body */}
             <CardBody>
-              <Box fontSize="4xl" fontWeight={800}>
-                <HStack spacing={4} m={3}>
-                  <Text>PTTit </Text>
+              <Flex direction="column">
+                <Text fontSize="4xl" fontWeight={800} mb={2}>
+                  PTTit{" "}
+                </Text>
+                <SimpleGrid columns={{ base: 3, md: 3, lg: 5 }} spacing={2}>
+                  <Flex
+                    h="50%"
+                    p={2}
+                    boxShadow="4px 4px black"
+                    border="3px solid black"
+                    borderRadius="md"
+                    color="white"
+                    fontSize="xs"
+                    bg="teal.400"
+                    justify="center"
+                    align="center"
+                    fontWeight={600}
+                  >
+                    <Text>Chakra UI</Text>
+                  </Flex>
 
-                  <Tag p={2} boxShadow="4px 4px black" border="3px solid black" variant="solid" bg="teal.400">
-                    Chakra UI
-                  </Tag>
+                  <Flex
+                    h="50%"
+                    p={2}
+                    boxShadow="4px 4px black"
+                    border="3px solid black"
+                    borderRadius="md"
+                    color="white"
+                    fontSize="xs"
+                    bg="gray.800"
+                    justify="center"
+                    align="center"
+                    fontWeight={600}
+                  >
+                    <Text>Next.js</Text>
+                  </Flex>
 
-                  <Tag p={2} boxShadow="4px 4px black" border="3px solid black" variant="solid" bg="gray.800">
-                    Next.js
-                  </Tag>
+                  <Flex
+                    h="50%"
+                    p={2}
+                    boxShadow="4px 4px black"
+                    border="3px solid black"
+                    borderRadius="md"
+                    color="white"
+                    fontSize="xs"
+                    bg="blue.600"
+                    justify="center"
+                    align="center"
+                    fontWeight={600}
+                  >
+                    <Text>Typescript</Text>
+                  </Flex>
 
-                  <Tag p={2} boxShadow="4px 4px black" border="3px solid black" variant="solid" bg="blue.600">
-                    Typescript
-                  </Tag>
+                  <Flex
+                    h="50%"
+                    p={2}
+                    boxShadow="4px 4px black"
+                    border="3px solid black"
+                    borderRadius="md"
+                    color="white"
+                    fontSize="xs"
+                    bg="orange.500"
+                    justify="center"
+                    align="center"
+                    fontWeight={600}
+                  >
+                    <Text>Firebase</Text>
+                  </Flex>
 
-                  <Tag p={2} boxShadow="4px 4px black" border="3px solid black" variant="solid" bg="orange.500">
-                    Firbase
-                  </Tag>
-
-                  <Tag p={2} boxShadow="4px 4px black" border="3px solid black" variant="solid" bg="purple.500">
-                    Recoil
-                  </Tag>
-                </HStack>
-              </Box>
+                  <Flex
+                    h="50%"
+                    p={2}
+                    boxShadow="4px 4px black"
+                    border="3px solid black"
+                    borderRadius="md"
+                    color="white"
+                    fontSize="xs"
+                    bg="purple.500"
+                    justify="center"
+                    align="center"
+                    fontWeight={600}
+                  >
+                    <Text>Recoil</Text>
+                  </Flex>
+                </SimpleGrid>
+              </Flex>
 
               <Text fontSize="lg" fontWeight={700}>
                 {" "}
@@ -73,23 +123,20 @@ const ProjectCard = () => {
             </CardBody>
 
             <Flex justify="center" gap={6}>
-              <Button boxShadow="4px 4px " bg="gray.100" border="3px solid black" borderRadius="lg" my={5} mr={2}>
-                查看內容
-              </Button>
+              <Button >查看內容</Button>
               <Link href="https://pttit.vercel.app/">
-                <Button boxShadow="4px 4px " bg="gray.100" border="3px solid black" borderRadius="lg" my={5} mr={2}>
-                  前往連結
-                </Button>
+                <Button >前往連結</Button>
               </Link>
-              <Link href="https://pttit.vercel.app/">
-                <IconButton boxShadow="4px 4px " bg="gray.100" border="3px solid black" borderRadius="lg" my={5} mr={2}  aria-label='Call Sage'  as={AiFillGithub}>
-                  GitHub
-                </IconButton>
+              <Link href="https://github.com/Lindahehexd/Pttit">
+                <Button fontSize="lg" >
+                  <Icon fontSize={30} as={AiFillGithub}></Icon>
+                  Github
+                </Button>
               </Link>
             </Flex>
           </Card>
 
-          <Card border="3px solid black" boxShadow="7px 7px " bg="#F4724E" h="100%" maxW="600px">
+          <Card  bg='purple.100' h="100%" maxW="600px" color={color} border={border} boxShadow={boxShadow}>
             <Flex p={3} borderBottom="5px solid black" justify="space-between">
               <Text fontSize="xl" fontWeight={800}>
                 PROJECT 2
@@ -101,23 +148,60 @@ const ProjectCard = () => {
             </Flex>
             {/* body */}
             <CardBody>
-              <Box fontSize="4xl" fontWeight={800}>
-                <HStack spacing={4} m={3}>
-                  <Text>聊天GO </Text>
+              <Flex direction="column">
+                <Text fontSize="4xl" fontWeight={800} mb={2}>
+                  聊天GO
+                </Text>
+                <SimpleGrid columns={{ base: 3, md: 3, lg: 5 }} spacing={2}>
+                  <Flex
+                    h="50%"
+                    p={2}
+                    boxShadow="4px 4px black"
+                    border="3px solid black"
+                    borderRadius="md"
+                    color="white"
+                    fontSize="xs"
+                    bg="teal.400"
+                    justify="center"
+                    align="center"
+                    fontWeight={600}
+                  >
+                    <Text>Chakra UI</Text>
+                  </Flex>
 
-                  <Tag p={2} boxShadow="4px 4px black" border="3px solid black" variant="solid" bg="teal.400">
-                    Chakra UI
-                  </Tag>
+                  <Flex
+                    h="50%"
+                    p={2}
+                    boxShadow="4px 4px black"
+                    border="3px solid black"
+                    borderRadius="md"
+                    color="white"
+                    fontSize="xs"
+                    bg="blue.600"
+                    justify="center"
+                    align="center"
+                    fontWeight={600}
+                  >
+                    <Text>React</Text>
+                  </Flex>
 
-                  <Tag p={2} boxShadow="4px 4px black" border="3px solid black" variant="solid" bg="blue.600">
-                    React
-                  </Tag>
-
-                  <Tag p={2} boxShadow="4px 4px black" border="3px solid black" variant="solid" bg="orange.500">
-                    Firbase
-                  </Tag>
-                </HStack>
-              </Box>
+                  <Flex
+                    h="50%"
+                    p={2}
+                    boxShadow="4px 4px black"
+                    border="3px solid black"
+                    borderRadius="md"
+                    color="white"
+                    fontSize="xs"
+                    bg="orange.500"
+                    justify="center"
+                    align="center"
+                    fontWeight={600}
+                  >
+                    <Text>Firebase</Text>
+                  </Flex>
+                </SimpleGrid>
+              </Flex>
 
               <Text fontSize="lg" fontWeight={700}>
                 聊天Go是一個任何人都可進入的公共聊天室，在聊天室中，您可以看到發訊息者的留言時間，
@@ -128,20 +212,21 @@ const ProjectCard = () => {
             </CardBody>
 
             <Flex justify="center" gap={6} align="center">
-              {/* <Button boxShadow="4px 4px " bg="gray.100" border="3px solid black" borderRadius="lg" my={5} mr={2}>
-                查看內容
-              </Button> */}
               <Project1Modal />
               <Link href=" https://chat-app-firebase-7rlx.vercel.app/">
-                <Button boxShadow="4px 4px " bg="gray.100" border="3px solid black" borderRadius="lg" my={5} mr={2}>
-                  前往連結
+                <Button>前往連結</Button>
+              </Link>
+              <Link href="https://github.com/Lindahehexd/chat-app-firebase">
+                <Button gap={1} fontSize="lg">
+                  <Icon fontSize={30} as={AiFillGithub}></Icon>
+                  Github
                 </Button>
               </Link>
             </Flex>
           </Card>
 
-          <Card border="3px solid black" boxShadow="7px 7px " bg="#ABCCDD" h="100%" maxW="600px">
-            <Flex p={3} bg="#ABCCDD" borderBottom="5px solid black" justify="space-between">
+          <Card  bg={bg} h="100%" maxW="600px" color={color} border={border} boxShadow={boxShadow}>
+            <Flex p={3}  borderBottom="5px solid black" justify="space-between">
               <Text fontSize="xl" fontWeight={800}>
                 PROJECT 3
               </Text>
@@ -152,19 +237,44 @@ const ProjectCard = () => {
             </Flex>
             {/* body */}
             <CardBody>
-              <Box fontSize="4xl" fontWeight={800}>
-                <HStack spacing={4} m={3}>
-                  <Text>Coin Tracker </Text>
+              <Flex direction="column">
+                <Text fontSize="4xl" fontWeight={800} mb={2}>
+                  Coin Tracker
+                </Text>
+                <SimpleGrid columns={{ base: 3, md: 3, lg: 5 }} spacing={2}>
+                  <Flex
+                    h="50%"
+                    p={2}
+                    boxShadow="4px 4px black"
+                    border="3px solid black"
+                    borderRadius="md"
+                    color="white"
+                    fontSize="xs"
+                    bg="teal.400"
+                    justify="center"
+                    align="center"
+                    fontWeight={600}
+                  >
+                    <Text>Chakra UI</Text>
+                  </Flex>
 
-                  <Tag p={2} boxShadow="4px 4px black" border="3px solid black" variant="solid" bg="teal.400">
-                    Chakra UI
-                  </Tag>
-
-                  <Tag p={2} boxShadow="4px 4px black" border="3px solid black" variant="solid" bg="blue.600">
-                    React
-                  </Tag>
-                </HStack>
-              </Box>
+                  <Flex
+                    h="50%"
+                    p={2}
+                    boxShadow="4px 4px black"
+                    border="3px solid black"
+                    borderRadius="md"
+                    color="white"
+                    fontSize="xs"
+                    bg="blue.600"
+                    justify="center"
+                    align="center"
+                    fontWeight={600}
+                  >
+                    <Text>React</Text>
+                  </Flex>
+                </SimpleGrid>
+              </Flex>
 
               <Text fontSize="lg" fontWeight={700}>
                 這是一個虛擬貨幣的即時百大排行榜，可以看到當前貨幣的最新資訊，包含名稱、價格、交易量，等等。本作品主要練習抓取API資料，並練習使用chart.js來呈現圖表。同時也練習react-router，熟悉跳頁方式的使用。另外也嘗試在撈資料時做Skeleton,提升使用者體驗
@@ -173,18 +283,20 @@ const ProjectCard = () => {
             </CardBody>
 
             <Flex justify="center" gap={6}>
-              <Button boxShadow="4px 4px " bg="gray.100" border="3px solid black" borderRadius="lg" my={5} mr={2}>
-                查看內容
-              </Button>
+              <Button>查看內容</Button>
               <Link href="https://coin-app-one.vercel.app/">
-                <Button boxShadow="4px 4px " bg="gray.100" border="3px solid black" borderRadius="lg" my={5} mr={2}>
-                  前往連結
+                <Button>前往連結</Button>
+              </Link>
+              <Link href=" https://github.com/Lindahehexd/coin-app">
+                <Button gap={1} fontSize="lg">
+                  <Icon fontSize={30} as={AiFillGithub}></Icon>
+                  Github
                 </Button>
               </Link>
             </Flex>
           </Card>
 
-          <Card border="3px solid black" boxShadow="7px 7px " bg="#F4724E" h="100%" maxW="600px">
+          <Card  bg='purple.100' h="100%" maxW="600px" color={color} border={border} boxShadow={boxShadow}>
             <Flex p={3} borderBottom="5px solid black" justify="space-between">
               <Text fontSize="xl" fontWeight={800}>
                 PROJECT 4
@@ -196,19 +308,44 @@ const ProjectCard = () => {
             </Flex>
             {/* body */}
             <CardBody>
-              <Box fontSize="4xl" fontWeight={800}>
-                <HStack spacing={4} m={3}>
-                  <Text>Todo List </Text>
+              <Flex direction="column">
+                <Text fontSize="4xl" fontWeight={800} mb={2}>
+                  Todo List
+                </Text>
+                <SimpleGrid columns={{ base: 3, md: 3, lg: 5 }} spacing={2}>
+                  <Flex
+                    h="50%"
+                    p={2}
+                    boxShadow="4px 4px black"
+                    border="3px solid black"
+                    borderRadius="md"
+                    color="white"
+                    fontSize="xs"
+                    bg="teal.400"
+                    justify="center"
+                    align="center"
+                    fontWeight={600}
+                  >
+                    <Text>Chakra UI</Text>
+                  </Flex>
 
-                  <Tag p={2} boxShadow="4px 4px black" border="3px solid black" variant="solid" bg="teal.400">
-                    Chakra UI
-                  </Tag>
-
-                  <Tag p={2} boxShadow="4px 4px black" border="3px solid black" variant="solid" bg="blue.600">
-                    React
-                  </Tag>
-                </HStack>
-              </Box>
+                  <Flex
+                    h="50%"
+                    p={2}
+                    boxShadow="4px 4px black"
+                    border="3px solid black"
+                    borderRadius="md"
+                    color="white"
+                    fontSize="xs"
+                    bg="blue.600"
+                    justify="center"
+                    align="center"
+                    fontWeight={600}
+                  >
+                    <Text>React</Text>
+                  </Flex>
+                </SimpleGrid>
+              </Flex>
 
               <Text fontSize="lg" fontWeight={700}>
                 此作品能讓使用者新增代辦事項及刪除完成事項，主要練習React,也同時熟悉Chakra UI的使用方式，並使用Local
@@ -218,19 +355,22 @@ const ProjectCard = () => {
             </CardBody>
 
             <Flex justify="center" gap={6}>
-              <Button boxShadow="4px 4px " bg="gray.100" border="3px solid black" borderRadius="lg" my={5} mr={2}>
-                查看內容
-              </Button>
+              <Button>查看內容</Button>
 
               <Link href="https://todo-list-zeta-jade.vercel.app/">
-                <Button boxShadow="4px 4px " bg="gray.100" border="3px solid black" borderRadius="lg" my={5} mr={2}>
-                  前往連結
+                <Button>前往連結</Button>
+              </Link>
+
+              <Link href=" https://github.com/Lindahehexd/Todo-List---">
+                <Button gap={1} fontSize="lg">
+                  <Icon fontSize={30} as={AiFillGithub}></Icon>
+                  Github
                 </Button>
               </Link>
             </Flex>
           </Card>
 
-          <Card border="3px solid black" boxShadow="7px 7px " bg="#ABCCDD" h="100%" maxW="600px">
+          <Card  bg={bg} h="100%" maxW="600px" color={color} border={border} boxShadow={boxShadow}>
             <Flex p={3} borderBottom="5px solid black" justify="space-between">
               <Text fontSize="xl" fontWeight={800}>
                 PROJECT 5
@@ -242,35 +382,62 @@ const ProjectCard = () => {
             </Flex>
             {/* body */}
             <CardBody>
-              <Box fontSize="4xl" fontWeight={800}>
-                <HStack spacing={4} m={3}>
-                  <Text>碳帶紙捲計算器 </Text>
-
-                  <Tag p={2} boxShadow="4px 4px black" border="3px solid black" variant="solid" bg="teal.400">
-                    CSS
-                  </Tag>
-
-                  <Tag p={2} boxShadow="4px 4px black" border="3px solid black" variant="solid" bg="blue.600">
-                    React
-                  </Tag>
-                </HStack>
-
-                <Text fontSize="lg" fontWeight={700}>
-                  此作品是因應上一份公司的產品需求所開發的小應用程式，可以透過現有標籤紙捲/碳帶來了解該耗材可印刷的總長度及印刷張數，本作品主要練習基本的css以及react的prop傳遞。
+              <Flex direction="column">
+                <Text fontSize="4xl" fontWeight={800} mb={2}>
+                  碳帶紙捲計算器
                 </Text>
-              </Box>
+                <SimpleGrid columns={{ base: 3, md: 3, lg: 5 }} spacing={2}>
+                  <Flex
+                    h="50%"
+                    p={2}
+                    boxShadow="4px 4px black"
+                    border="3px solid black"
+                    borderRadius="md"
+                    color="white"
+                    fontSize="xs"
+                    bg="teal.400"
+                    justify="center"
+                    align="center"
+                    fontWeight={600}
+                  >
+                    <Text>CSS</Text>
+                  </Flex>
+
+                  <Flex
+                    h="50%"
+                    p={2}
+                    boxShadow="4px 4px black"
+                    border="3px solid black"
+                    borderRadius="md"
+                    color="white"
+                    fontSize="xs"
+                    bg="blue.600"
+                    justify="center"
+                    align="center"
+                    fontWeight={600}
+                  >
+                    <Text>React</Text>
+                  </Flex>
+                </SimpleGrid>
+              </Flex>
+
+              <Text fontSize="lg" fontWeight={700}>
+                此作品是因應上一份公司的產品需求所開發的小應用程式，可以透過現有標籤紙捲/碳帶來了解該耗材可印刷的總長度及印刷張數，本作品主要練習基本的css以及react的prop傳遞。
+              </Text>
 
               <Text fontSize="lg" fontWeight={700}></Text>
               {/* <Image src="/aboutme3.png" alt="" objectFit="contain" boxSize="250px" /> */}
             </CardBody>
 
             <Flex justify="center" gap={6}>
-              <Button boxShadow="4px 4px " bg="gray.100" border="3px solid black" borderRadius="lg" my={5} mr={2}>
-                查看內容
-              </Button>
+              <Button>查看內容</Button>
               <Link href=" https://media-label-calculator.vercel.app/">
-                <Button boxShadow="4px 4px " bg="gray.100" border="3px solid black" borderRadius="lg" my={5} mr={2}>
-                  前往連結
+                <Button>前往連結</Button>
+              </Link>
+              <Link href=" https://github.com/Lindahehexd/Media-Label-Calculator">
+                <Button gap={1} fontSize="lg">
+                  <Icon fontSize={30} as={AiFillGithub}></Icon>
+                  Github
                 </Button>
               </Link>
             </Flex>
