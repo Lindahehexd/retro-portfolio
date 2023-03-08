@@ -39,7 +39,7 @@ const AboutMeBox = () => {
           <Box borderRadius="md" p={2}>
             {/* Content of the first component */}
             <Card
-              boxShadow={boxShadow}
+              boxShadow={useColorModeValue("8px  8px black", "8px 8px   white")}
               bg={useColorModeValue("#FCE2FF", "#e5ff73")}
               border={border}
               h="400px"
@@ -67,17 +67,17 @@ const AboutMeBox = () => {
             </Flex>
           </Box>
 
-          <Box fontSize="xl" fontWeight={600} p={2}>
+          <Box  p={2}>
             <Heading fontSize="5xl">關於我</Heading>
-            <Text mb={3}>
+            <Text my={3} fontSize="lg" fontWeight={600}>
               我叫大鈞，26歲，曾是技術文件工程師，專長在於將事物以簡易的方式清楚表達，讓工程師或使用者都能快速上手產品。
               同時，我享受學習也享受解決問題，並且將其化為我的成就感。
             </Text>
-            <Text mb={3}>
+            <Text mb={3} fontSize="lg" fontWeight={600} >
               轉職的契機：自我實現占一大宗，希望能沿用自己的專長，讓自己除了有能力解決問題，也能自己開發功能。
               並且希望後續能以先前的專業，讓未來想朝這方向努力的人們，提供一個最友善且簡單明瞭的教學空間。
             </Text>
-            <Text mb={3}>
+            <Text mb={3} fontSize="lg" fontWeight={600}>
               關於我的過去與成就，歡迎透過我以前的網頁了解更多{" "}
               <Link href="https://dajiun-portfolio.netlify.app/#portfolio" target="_blank">
                 <Button

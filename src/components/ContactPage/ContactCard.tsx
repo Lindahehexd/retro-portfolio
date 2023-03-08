@@ -17,7 +17,7 @@ const ContactCard = () => {
   return (
     <>
       <VStack spacing={10} p={4}>
-        <Text fontWeight={700} fontSize="2xl">
+        <Text fontWeight={700} fontSize="xl">
           如果我有符合貴公司的條件的話，歡迎與我聯繫或聊聊，以下是我的資訊:{" "}
         </Text>
         <Flex w="100%" justify="center">
