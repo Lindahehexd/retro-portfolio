@@ -34,7 +34,7 @@ const Navbar = () => {
     };
     window.addEventListener("resize", handleResize);
     handleResize();
-  
+
     // return a cleanup function to remove the event listener
     return () => {
       window.removeEventListener("resize", handleResize);
@@ -52,11 +52,13 @@ const Navbar = () => {
         // bg='#E1EEDD'
         // bg='#E6FE72'
         // E5FF73
-        justify="space-between"
+        justify="center"
         align="center"
         px={5}
         borderBottom={borderBot}
       >
+        {/* <Flex bg='teal' w='100%' justify='space-between' align="center"> */}
+
         <Text fontSize="2xl" fontWeight="bold">
           Da-Jiun Lin
         </Text>
@@ -99,32 +101,32 @@ const Navbar = () => {
         <Box pb={4} mt={8} w="100vw" zIndex={20}>
           <VStack spacing={4} alignItems="center">
             <Link href="/">
-              <Button border={border} boxShadow={boxShadow} _hover={{ bg: hoverBg }}  onClick={onToggle}  minW={200}>
+              <Button border={border} boxShadow={boxShadow} _hover={{ bg: hoverBg }} onClick={onToggle} minW={200}>
                 首頁
               </Button>
             </Link>
             <Link href="projects">
-              <Button border={border} boxShadow={boxShadow} _hover={{ bg: hoverBg }}  onClick={onToggle}  minW={200}>
+              <Button border={border} boxShadow={boxShadow} _hover={{ bg: hoverBg }} onClick={onToggle} minW={200}>
                 作品集
               </Button>
             </Link>
             <Link href="/about">
-              <Button border={border} boxShadow={boxShadow} _hover={{ bg: hoverBg }}  onClick={onToggle}  minW={200}>
+              <Button border={border} boxShadow={boxShadow} _hover={{ bg: hoverBg }} onClick={onToggle} minW={200}>
                 關於我
               </Button>
             </Link>
             <Link href="/contact">
-              <Button border={border} boxShadow={boxShadow} _hover={{ bg: hoverBg }}   onClick={onToggle}  minW={200}>
+              <Button border={border} boxShadow={boxShadow} _hover={{ bg: hoverBg }} onClick={onToggle} minW={200}>
                 聯絡方式
               </Button>
             </Link>
-            <Flex minW={200} >
-
-            <SwitchThemeButton />
+            <Flex minW={200}>
+              <SwitchThemeButton />
             </Flex>
           </VStack>
         </Box>
       </Collapse>
+      {/* </Flex> */}
     </Box>
   );
 };

@@ -36,7 +36,7 @@ const AboutMeBox = () => {
     <>
       <HStack mt={{ base: "none", md: "7", lg: "9" }}>
         <SimpleGrid columns={{ sm: 1, md: 1, lg: 2 }} templateColumns={["1fr", "1fr", "37% 1fr"]} gap={4} mt={4}>
-          <Box borderRadius="md">
+          <Box borderRadius="md" p={2}>
             {/* Content of the first component */}
             <Card
               boxShadow={boxShadow}
@@ -67,8 +67,8 @@ const AboutMeBox = () => {
             </Flex>
           </Box>
 
-          <Box fontSize="xl" fontWeight={600}>
-            <Text fontSize="5xl">關於我</Text>
+          <Box fontSize="xl" fontWeight={600} p={2}>
+            <Heading fontSize="5xl">關於我</Heading>
             <Text mb={3}>
               我叫大鈞，26歲，曾是技術文件工程師，專長在於將事物以簡易的方式清楚表達，讓工程師或使用者都能快速上手產品。
               同時，我享受學習也享受解決問題，並且將其化為我的成就感。

@@ -17,7 +17,7 @@ const ProjectCard = () => {
   return (
     <>
       <Flex align="center" direction="column" w="100%">
-        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} mb={8}>
+        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} mb={8} p={1}>
           <Card boxShadow={boxShadow} bg={cardBg1} h="100%" maxW="600px" color={color} border={border}>
             <Flex p={3} borderBottom="5px solid black" justify="space-between">
               <Text fontSize="xl" fontWeight={800}>
