@@ -23,7 +23,7 @@ const AboutMeBox = () => {
   const hoverBg = useColorModeValue("green.100", "pink.200");
 
   const handleDownload = () => {
-    const url = "./test.pdf.pdf";
+    const url = "./resume_2023.pdf";
     fetch(url)
       .then((response) => {
         if (!response.ok) {
@@ -35,7 +35,7 @@ const AboutMeBox = () => {
         const url = window.URL.createObjectURL(blob);
         const a = document.createElement("a");
         a.href = url;
-        a.download = "resume.pdf";
+        a.download = "Da-Jiun_Lin_Resume.pdf";
         document.body.appendChild(a);
         a.click();
         a.remove();
