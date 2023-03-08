@@ -83,9 +83,9 @@ const Project1Modal = () => {
 
   return (
     <>
-      <Button boxShadow="4px 4px " bg="gray.100" border="3px solid black" borderRadius="lg" onClick={onOpen}>
+      {/* <Button boxShadow="4px 4px " bg="gray.100" border="3px solid black" borderRadius="lg" onClick={onOpen}>
         Open Modal
-      </Button>
+      </Button> */}
 
       <Modal blockScrollOnMount={true} isOpen={isOpen} onClose={onClose} size="xl">
         <ModalOverlay />

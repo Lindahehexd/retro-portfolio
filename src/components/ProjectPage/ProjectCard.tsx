@@ -6,16 +6,19 @@ import Project1Modal from "../Modal/Project1Modal";
 
 const ProjectCard = () => {
   const border = useColorModeValue("3px solid black", "3px solid white");
-  const bg = useColorModeValue("#E1EEDD", "purple.100");
   const color = useColorModeValue("gray.900", "gray.900");
-  const boxShadow = useColorModeValue("7px 7px black", "7px 7px orange");
+  const boxShadow = useColorModeValue("7px 7px black", "7px 7px white");
+  const btnbg = useColorModeValue("gray.50", "gray.50");
+  const hoverBg = useColorModeValue("#E6FE72", "#E6FE72");
+  const cardBg1 = useColorModeValue("#E1EEDD", "purple.100");
+  const cardBg2 = useColorModeValue("purple.100", "#E1EEDD");
 //   ABCCDD
 
   return (
     <>
       <Flex align="center" direction="column" w="100%">
         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} mb={8}>
-          <Card boxShadow={boxShadow} bg={bg} h="100%" maxW="600px" color={color} border={border}>
+          <Card boxShadow={boxShadow} bg={cardBg1} h="100%" maxW="600px" color={color} border={border}>
             <Flex p={3} borderBottom="5px solid black" justify="space-between">
               <Text fontSize="xl" fontWeight={800}>
                 PROJECT 1
@@ -123,12 +126,12 @@ const ProjectCard = () => {
             </CardBody>
 
             <Flex justify="center" gap={6}>
-              <Button >查看內容</Button>
+              {/* <Button >查看內容</Button> */}
               <Link href="https://pttit.vercel.app/">
-                <Button >前往連結</Button>
+                <Button bg={btnbg} _hover={{bg:hoverBg}}>前往連結</Button>
               </Link>
               <Link href="https://github.com/Lindahehexd/Pttit">
-                <Button fontSize="lg" >
+                <Button fontSize="lg" bg={btnbg} _hover={{bg:hoverBg}} >
                   <Icon fontSize={30} as={AiFillGithub}></Icon>
                   Github
                 </Button>
@@ -136,7 +139,7 @@ const ProjectCard = () => {
             </Flex>
           </Card>
 
-          <Card  bg='purple.100' h="100%" maxW="600px" color={color} border={border} boxShadow={boxShadow}>
+          <Card  bg={cardBg2} h="100%" maxW="600px" color={color} border={border} boxShadow={boxShadow}>
             <Flex p={3} borderBottom="5px solid black" justify="space-between">
               <Text fontSize="xl" fontWeight={800}>
                 PROJECT 2
@@ -214,10 +217,10 @@ const ProjectCard = () => {
             <Flex justify="center" gap={6} align="center">
               <Project1Modal />
               <Link href=" https://chat-app-firebase-7rlx.vercel.app/">
-                <Button>前往連結</Button>
+                <Button bg={btnbg} _hover={{bg:hoverBg}} >前往連結</Button>
               </Link>
               <Link href="https://github.com/Lindahehexd/chat-app-firebase">
-                <Button gap={1} fontSize="lg">
+                <Button gap={1} fontSize="lg" bg={btnbg} _hover={{bg:hoverBg}} >
                   <Icon fontSize={30} as={AiFillGithub}></Icon>
                   Github
                 </Button>
@@ -225,7 +228,7 @@ const ProjectCard = () => {
             </Flex>
           </Card>
 
-          <Card  bg={bg} h="100%" maxW="600px" color={color} border={border} boxShadow={boxShadow}>
+          <Card  bg={cardBg1} h="100%" maxW="600px" color={color} border={border} boxShadow={boxShadow}>
             <Flex p={3}  borderBottom="5px solid black" justify="space-between">
               <Text fontSize="xl" fontWeight={800}>
                 PROJECT 3
@@ -283,12 +286,12 @@ const ProjectCard = () => {
             </CardBody>
 
             <Flex justify="center" gap={6}>
-              <Button>查看內容</Button>
+              {/* <Button>查看內容</Button> */}
               <Link href="https://coin-app-one.vercel.app/">
-                <Button>前往連結</Button>
+                <Button bg={btnbg} _hover={{bg:hoverBg}} >前往連結</Button>
               </Link>
               <Link href=" https://github.com/Lindahehexd/coin-app">
-                <Button gap={1} fontSize="lg">
+                <Button gap={1} fontSize="lg" bg={btnbg} _hover={{bg:hoverBg}} >
                   <Icon fontSize={30} as={AiFillGithub}></Icon>
                   Github
                 </Button>
@@ -296,7 +299,7 @@ const ProjectCard = () => {
             </Flex>
           </Card>
 
-          <Card  bg='purple.100' h="100%" maxW="600px" color={color} border={border} boxShadow={boxShadow}>
+          <Card  bg={cardBg2} h="100%" maxW="600px" color={color} border={border} boxShadow={boxShadow}>
             <Flex p={3} borderBottom="5px solid black" justify="space-between">
               <Text fontSize="xl" fontWeight={800}>
                 PROJECT 4
@@ -355,22 +358,22 @@ const ProjectCard = () => {
             </CardBody>
 
             <Flex justify="center" gap={6}>
-              <Button>查看內容</Button>
+              {/* <Button>查看內容</Button> */}
 
               <Link href="https://todo-list-zeta-jade.vercel.app/">
-                <Button>前往連結</Button>
+                <Button bg={btnbg} _hover={{bg:hoverBg}} >前往連結</Button>
               </Link>
 
               <Link href=" https://github.com/Lindahehexd/Todo-List---">
-                <Button gap={1} fontSize="lg">
-                  <Icon fontSize={30} as={AiFillGithub}></Icon>
+                <Button gap={1} fontSize="lg" bg={btnbg} _hover={{bg:hoverBg}} >
+                  <Icon fontSize={30} as={AiFillGithub} ></Icon>
                   Github
                 </Button>
               </Link>
             </Flex>
           </Card>
 
-          <Card  bg={bg} h="100%" maxW="600px" color={color} border={border} boxShadow={boxShadow}>
+          <Card  bg={cardBg1} h="100%" maxW="600px" color={color} border={border} boxShadow={boxShadow}>
             <Flex p={3} borderBottom="5px solid black" justify="space-between">
               <Text fontSize="xl" fontWeight={800}>
                 PROJECT 5
@@ -430,12 +433,12 @@ const ProjectCard = () => {
             </CardBody>
 
             <Flex justify="center" gap={6}>
-              <Button>查看內容</Button>
+              {/* <Button>查看內容</Button> */}
               <Link href=" https://media-label-calculator.vercel.app/">
-                <Button>前往連結</Button>
+                <Button bg={btnbg} _hover={{bg:hoverBg}} >前往連結</Button>
               </Link>
               <Link href=" https://github.com/Lindahehexd/Media-Label-Calculator">
-                <Button gap={1} fontSize="lg">
+                <Button gap={1} fontSize="lg" bg={btnbg} _hover={{bg:hoverBg}} >
                   <Icon fontSize={30} as={AiFillGithub}></Icon>
                   Github
                 </Button>

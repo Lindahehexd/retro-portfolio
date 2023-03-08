@@ -20,10 +20,10 @@ const Navbar = () => {
   const { isOpen, onToggle } = useDisclosure();
   const [isMobile, setIsMobile] = useState(false);
   const border = useColorModeValue("3px solid black", "3px solid white");
-  const bg = useColorModeValue("gray.50", "gray.50");
-  const color = useColorModeValue("gray.900", "gray.900");
-  const boxShadow = useColorModeValue("7px 7px black", "7px 7px white");
+  const iconBg = useColorModeValue("gray.50", "#333333");
+  const boxShadow = useColorModeValue("4px 4px black", "4px 4px white");
   const borderBot = useColorModeValue("5px solid black", "5px solid white");
+  const hoverBg = useColorModeValue("#E6FE72", "pink.400");
 
   useEffect(() => {
     const handleResize = () => {
@@ -59,6 +59,8 @@ const Navbar = () => {
         </Text>
         {isMobile ? (
           <IconButton
+            bg={iconBg}
+            border={border}
             icon={isOpen ? <RiCloseFill /> : <RxHamburgerMenu />}
             onClick={onToggle}
             variant="ghost"
@@ -67,16 +69,24 @@ const Navbar = () => {
         ) : (
           <HStack spacing={4}>
             <Link href="/" passHref>
-              <Button border={border}>首頁</Button>
+              <Button border={border} _hover={{ bg: hoverBg }}>
+                首頁
+              </Button>
             </Link>
             <Link href="projects">
-              <Button border={border}>作品集</Button>
+              <Button border={border} _hover={{ bg: hoverBg }}>
+                作品集
+              </Button>
             </Link>
             <Link href="/about">
-              <Button border={border}>關於我</Button>
+              <Button border={border} _hover={{ bg: hoverBg }}>
+                關於我
+              </Button>
             </Link>
             <Link href="/contact">
-              <Button border={border}>聯絡方式</Button>
+              <Button border={border} _hover={{ bg: hoverBg }}>
+                聯絡方式
+              </Button>
             </Link>
             <SwitchThemeButton />
           </HStack>
@@ -86,26 +96,29 @@ const Navbar = () => {
         <Box pb={4} mt={8} w="100vw" zIndex={20}>
           <VStack spacing={4} alignItems="center">
             <Link href="/">
-              <Button border={border} boxShadow={boxShadow} w="30vh">
+              <Button border={border} boxShadow={boxShadow} _hover={{ bg: hoverBg }} w="30vh">
                 首頁
               </Button>
             </Link>
             <Link href="projects">
-              <Button border={border} boxShadow={boxShadow} w="30vh">
+              <Button border={border} boxShadow={boxShadow} _hover={{ bg: hoverBg }} w="30vh">
                 作品集
               </Button>
             </Link>
             <Link href="/about">
-              <Button border={border} boxShadow={boxShadow} w="30vh">
+              <Button border={border} boxShadow={boxShadow} _hover={{ bg: hoverBg }} w="30vh">
                 關於我
               </Button>
             </Link>
             <Link href="/contact">
-              <Button border={border} boxShadow={boxShadow} w="30vh">
+              <Button border={border} boxShadow={boxShadow} _hover={{ bg: hoverBg }} w="30vh">
                 聯絡方式
               </Button>
             </Link>
+            <Flex w='30vh' >
+
             <SwitchThemeButton />
+            </Flex>
           </VStack>
         </Box>
       </Collapse>

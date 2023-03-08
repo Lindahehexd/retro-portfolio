@@ -12,12 +12,15 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import Link from "next/link";
+import { BsArrowRight } from "react-icons/bs";
+import { FaArrowRight } from "react-icons/fa";
 
 const AboutMeBox = () => {
   const border = useColorModeValue("3px solid black", "3px solid white");
-  const bg = useColorModeValue("gray.50", "gray.50");
+  const bg = useColorModeValue("#E4FF74", "pink.400");
   const color = useColorModeValue("gray.900", "gray.900");
   const boxShadow = useColorModeValue("4px 4px black", "4px 4px white");
+  const hoverBg = useColorModeValue("green.100", "pink.200");
 
   const handleDownload = () => {
     const url = "./test.pdf.pdf";
@@ -49,8 +52,8 @@ const AboutMeBox = () => {
           <Box borderRadius="md">
             {/* Content of the first component */}
             <Card
-              boxShadow="7px 7px #E4FF74"
-              bg="#FCE2FF"
+              boxShadow={boxShadow}
+              bg= {useColorModeValue("#FCE2FF",'#e5ff73')}
               border={border}
               h="400px"
               justify="center"
@@ -63,11 +66,11 @@ const AboutMeBox = () => {
             <Flex justify="center" mt={5}>
               <Button
                 onClick={handleDownload}
-                boxShadow="4px 4px #E4FF74 "
-                bg="black"
-                color="white"
-                _hover={{ bg: "#E4FF74" }}
+                boxShadow={boxShadow}
+                bg={bg}
                 border={border}
+                color = {useColorModeValue('black' , 'white')}
+                _hover={{ bg: hoverBg }}
                 mt={{ base: 2, md: 8 }}
                 w="40%"
                 fontSize="xl"
@@ -90,7 +93,15 @@ const AboutMeBox = () => {
             <Text mb={3}>
               關於我的過去與成就，歡迎透過我以前的網頁了解更多{" "}
               <Link href="https://dajiun-portfolio.netlify.app/#portfolio">
-                <Button p={2} boxShadow="4px 4px black" border="3px solid black" variant="solid"></Button>
+                <Button
+                  as={FaArrowRight}
+                  p={2}
+                  boxShadow={boxShadow}
+                  border={border}
+                  variant="solid"
+                  _hover={{ bg: hoverBg }}
+                  bg={bg}
+                ></Button>
               </Link>
             </Text>
 

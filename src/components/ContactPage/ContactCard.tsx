@@ -9,16 +9,16 @@ const handleSendMail = () => {
 
 const ContactCard = () => {
   const border = useColorModeValue("3px solid black", "3px solid white");
-  const bg = useColorModeValue("gray.50", "gray.50");
+  const bg = useColorModeValue("gray.50", "gray.800");
   const color = useColorModeValue("gray.900", "gray.900");
-  const boxShadow = useColorModeValue("7px 7px black", "7px 7px  #E4FF74");
-  const hoverBg = useColorModeValue("#E6FE72", "purple.500");
+  const boxShadow = useColorModeValue("7px 7px black", "7px 7px");
+  const hoverBg = useColorModeValue("pink.400", "pink.400");
 
   return (
     <>
       <VStack spacing={10} p={2}>
         <Text fontWeight={700} fontSize="2xl">
-          歡迎深入了解或簡單聊聊，或我有符合貴公司的條件的話，以下是我的資訊:{" "}
+          如果我有符合貴公司的條件的話，歡迎與我聯繫或聊聊，以下是我的資訊:{" "}
         </Text>
         <Flex w="100%" justify="center">
           <Card bg="gray.800" mb={6} w="80%" border={border} boxShadow={boxShadow}>
@@ -68,14 +68,15 @@ const ContactCard = () => {
           direction="row"
           h="100px"
           gap={5}
+          bg={bg}
         >
           <Link href="https://www.linkedin.com/in/da-jiun-lin-47a5841a1/">
-            <Icon fontSize={40} as={AiFillLinkedin} cursor="pointer" />
+            <Icon fontSize={40} as={AiFillLinkedin} cursor="pointer" _hover={{color:hoverBg}} />
           </Link>
           <Link href="https://github.com/Lindahehexd">
-            <Icon fontSize={40} as={AiFillGithub} cursor="pointer" />
+            <Icon fontSize={40} as={AiFillGithub} cursor="pointer"  _hover={{color:hoverBg}}/>
           </Link>
-          <Icon fontSize={35} as={SiGmail} onClick={handleSendMail} cursor="pointer" />
+          <Icon fontSize={35} as={SiGmail} onClick={handleSendMail} cursor="pointer" _hover={{color:hoverBg}} />
         </Card>
       </VStack>
     </>

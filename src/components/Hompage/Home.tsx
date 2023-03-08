@@ -9,11 +9,11 @@ import Link from "next/link";
 const HomeItem = () => {
   const border = useColorModeValue("3px solid black", "3px solid white");
   const border2 = useColorModeValue("3px solid black", "3px solid black");
-  const bg = useColorModeValue("gray.50", "purple.200");
-  const iconBg = useColorModeValue("black", "white");
-  const color = useColorModeValue("gray.900", "gray.900");
-  const boxShadow = useColorModeValue("7px 7px black", "7px 7px white");
-  const hoverBg = useColorModeValue("#E6FE72", "purple.500");
+  const bg = useColorModeValue("gray.50", "#e4ff74");
+  const iconBg = useColorModeValue("black", "black");
+  const hoverBg = useColorModeValue("#E6FE72", "pink.400");
+  const iconHoverBg = useColorModeValue("pink.400", "pink.400");
+  const profileBg = useColorModeValue("#E1EEDD", "pink.200");
 
   return (
     <Flex fontSize={30} align="center" w="100%" h="75vh" justify="center" p={5}>
@@ -40,7 +40,7 @@ const HomeItem = () => {
               </Link>
               或是{" "}
               <Link href="/projects">
-                <Button w="20%" border={border}>
+                <Button w="20%" border={border}  _hover={{ bg: hoverBg }}>
                   作品集
                 </Button>{" "}
               </Link>
@@ -54,7 +54,7 @@ const HomeItem = () => {
 
           {/* body */}
           <CardBody>
-            <Flex direction="column" bg="#E1EEDD" color="#FFCB6B" border={border2} borderRadius="xl">
+            <Flex direction="column" bg={profileBg} color="#FFCB6B" border={border2} borderRadius="xl">
               <Flex justify="center">
                 <Image src="/aboutme3.png" alt="" objectFit="contain" boxSize="250px" />
               </Flex>
@@ -62,10 +62,10 @@ const HomeItem = () => {
 
             <Flex justify="center" mt={4} gap={3}>
               <Link href="https://www.linkedin.com/in/da-jiun-lin-47a5841a1/">
-                <Icon fontSize={40} as={AiFillLinkedin} cursor="pointer" />
+                <Icon fontSize={40} as={AiFillLinkedin} cursor="pointer" color={iconBg} _hover={{color:iconHoverBg}} />
               </Link>
               <Link href="https://github.com/Lindahehexd">
-                <Icon fontSize={40} as={AiFillGithub} cursor="pointer" />
+                <Icon fontSize={40} as={AiFillGithub} cursor="pointer"  color={iconBg}  _hover={{color:iconHoverBg}}/>
               </Link>
             </Flex>
           </CardBody>
