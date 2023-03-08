@@ -16,9 +16,11 @@ const HomeItem = () => {
   const profileBg = useColorModeValue("#E1EEDD", "pink.200");
 
   return (
-    <Flex fontSize={30} align="center" w="100%" h="75vh" justify="center" p={5}>
-      <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} mb={8}>
-        <Flex direction="column" justify="center" mt={{ base: "200px", md: 0 }}>
+    <Flex fontSize={30} align="center" w="100%"  minH="75vh"  justify="center" p={5}  >
+        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} mb={8}>
+        <Flex direction="column" justify="center"
+        //  mt={{ base: "200px", md: 0 }}
+         >
           <Wrap>
             <WrapItem>
               <Heading fontSize={{ base: "70px", md: "130px" }}> Hi </Heading>
