@@ -17,7 +17,7 @@ import Link from "next/link";
 import SwitchThemeButton from "./SwitchThemeButton";
 
 const Navbar = () => {
-  const { isOpen, onToggle } = useDisclosure();
+  const { isOpen, onToggle, onClose } = useDisclosure();
   const [isMobile, setIsMobile] = useState(false);
   const border = useColorModeValue("3px solid black", "3px solid white");
   const iconBg = useColorModeValue("gray.50", "#333333");
@@ -28,10 +28,13 @@ const Navbar = () => {
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
+      if (window.innerWidth > 768) {
+        onClose(); // close the collapse when the window size is greater than 768px
+      }
     };
     window.addEventListener("resize", handleResize);
     handleResize();
-
+  
     // return a cleanup function to remove the event listener
     return () => {
       window.removeEventListener("resize", handleResize);
@@ -96,26 +99,26 @@ const Navbar = () => {
         <Box pb={4} mt={8} w="100vw" zIndex={20}>
           <VStack spacing={4} alignItems="center">
             <Link href="/">
-              <Button border={border} boxShadow={boxShadow} _hover={{ bg: hoverBg }} w="30vh">
+              <Button border={border} boxShadow={boxShadow} _hover={{ bg: hoverBg }}  onClick={onToggle}  minW={200}>
                 首頁
               </Button>
             </Link>
             <Link href="projects">
-              <Button border={border} boxShadow={boxShadow} _hover={{ bg: hoverBg }} w="30vh">
+              <Button border={border} boxShadow={boxShadow} _hover={{ bg: hoverBg }}  onClick={onToggle}  minW={200}>
                 作品集
               </Button>
             </Link>
             <Link href="/about">
-              <Button border={border} boxShadow={boxShadow} _hover={{ bg: hoverBg }} w="30vh">
+              <Button border={border} boxShadow={boxShadow} _hover={{ bg: hoverBg }}  onClick={onToggle}  minW={200}>
                 關於我
               </Button>
             </Link>
             <Link href="/contact">
-              <Button border={border} boxShadow={boxShadow} _hover={{ bg: hoverBg }} w="30vh">
+              <Button border={border} boxShadow={boxShadow} _hover={{ bg: hoverBg }}   onClick={onToggle}  minW={200}>
                 聯絡方式
               </Button>
             </Link>
-            <Flex w='30vh' >
+            <Flex minW={200} >
 
             <SwitchThemeButton />
             </Flex>

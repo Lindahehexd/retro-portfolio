@@ -1,26 +1,13 @@
-import {
-  Card,
-  Text,
-  Flex,
-  Button,
-  Image,
-  Box,
-  Heading,
-  HStack,
-  SimpleGrid,
-  Tag,
-  useColorModeValue,
-} from "@chakra-ui/react";
-import Link from "next/link";
-import { BsArrowRight } from "react-icons/bs";
+import { Card, Text, Flex, Button, Image, Box, Heading, HStack, SimpleGrid, useColorModeValue } from "@chakra-ui/react";
 import { FaArrowRight } from "react-icons/fa";
+import Link from "next/link";
 
 const AboutMeBox = () => {
   const border = useColorModeValue("3px solid black", "3px solid white");
   const bg = useColorModeValue("#E4FF74", "pink.400");
   const color = useColorModeValue("gray.900", "gray.900");
   const boxShadow = useColorModeValue("4px 4px black", "4px 4px white");
-  const hoverBg = useColorModeValue("green.100", "pink.200");
+  const hoverBg = useColorModeValue("#c4ed0e", "pink.200");
 
   const handleDownload = () => {
     const url = "./resume_2023.pdf";
@@ -53,7 +40,7 @@ const AboutMeBox = () => {
             {/* Content of the first component */}
             <Card
               boxShadow={boxShadow}
-              bg= {useColorModeValue("#FCE2FF",'#e5ff73')}
+              bg={useColorModeValue("#FCE2FF", "#e5ff73")}
               border={border}
               h="400px"
               justify="center"
@@ -69,7 +56,7 @@ const AboutMeBox = () => {
                 boxShadow={boxShadow}
                 bg={bg}
                 border={border}
-                color = {useColorModeValue('black' , 'white')}
+                color={useColorModeValue("black", "white")}
                 _hover={{ bg: hoverBg }}
                 mt={{ base: 2, md: 8 }}
                 w="40%"
@@ -92,7 +79,7 @@ const AboutMeBox = () => {
             </Text>
             <Text mb={3}>
               關於我的過去與成就，歡迎透過我以前的網頁了解更多{" "}
-              <Link href="https://dajiun-portfolio.netlify.app/#portfolio">
+              <Link href="https://dajiun-portfolio.netlify.app/#portfolio" target="_blank">
                 <Button
                   as={FaArrowRight}
                   p={2}
@@ -108,32 +95,32 @@ const AboutMeBox = () => {
             <Heading fontSize="5xl"> 技能 </Heading>
 
             <SimpleGrid columns={{ sm: 3, md: 3, lg: 3 }} gap={3} mt={3}>
-              <Flex justify="center" border={border} boxShadow={boxShadow} borderRadius="lg">
+              <Flex justify="center" border={border} boxShadow={boxShadow} borderRadius="lg" _hover={{bg:bg}}>
+                Next.js{" "}
+              </Flex>
+              <Flex justify="center" border={border} boxShadow={boxShadow} borderRadius="lg" _hover={{bg:bg}}>
                 React{" "}
               </Flex>
-              <Flex justify="center" border={border} boxShadow={boxShadow} borderRadius="lg">
+              <Flex justify="center" border={border} boxShadow={boxShadow} borderRadius="lg" _hover={{bg:bg}}>
                 Typescript
               </Flex>
-              <Flex justify="center" border={border} boxShadow={boxShadow} borderRadius="lg">
+              <Flex justify="center" border={border} boxShadow={boxShadow} borderRadius="lg" _hover={{bg:bg}}>
                 Firebase
               </Flex>
-              <Flex justify="center" border={border} boxShadow={boxShadow} borderRadius="lg">
+              <Flex justify="center" border={border} boxShadow={boxShadow} borderRadius="lg" _hover={{bg:bg}}>
                 Recoil{" "}
               </Flex>
-              <Flex justify="center" border={border} boxShadow={boxShadow} borderRadius="lg">
+              <Flex justify="center" border={border} boxShadow={boxShadow} borderRadius="lg" _hover={{bg:bg}}>
                 Chakra UI{" "}
               </Flex>
-              <Flex justify="center" border={border} boxShadow={boxShadow} borderRadius="lg">
+              <Flex justify="center" border={border} boxShadow={boxShadow} borderRadius="lg" _hover={{bg:bg}}>
                 Tailwind CSS{" "}
               </Flex>
-              <Flex justify="center" border={border} boxShadow={boxShadow} borderRadius="lg">
+              <Flex justify="center" border={border} boxShadow={boxShadow} borderRadius="lg" _hover={{bg:bg}}>
                 Javascript
               </Flex>
-              <Flex justify="center" border={border} boxShadow={boxShadow} borderRadius="lg">
+              <Flex justify="center" border={border} boxShadow={boxShadow} borderRadius="lg" _hover={{bg:bg}}>
                 CSS{" "}
-              </Flex>
-              <Flex justify="center" border={border} boxShadow={boxShadow} borderRadius="lg">
-                Html5{" "}
               </Flex>
             </SimpleGrid>
           </Box>

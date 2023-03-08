@@ -127,10 +127,10 @@ const ProjectCard = () => {
 
             <Flex justify="center" gap={6}>
               {/* <Button >查看內容</Button> */}
-              <Link href="https://pttit.vercel.app/">
+              <Link href="https://pttit.vercel.app/" target="_blank">
                 <Button bg={btnbg} _hover={{bg:hoverBg}}>前往連結</Button>
               </Link>
-              <Link href="https://github.com/Lindahehexd/Pttit">
+              <Link href="https://github.com/Lindahehexd/Pttit" target="_blank">
                 <Button fontSize="lg" bg={btnbg} _hover={{bg:hoverBg}} >
                   <Icon fontSize={30} as={AiFillGithub}></Icon>
                   Github
@@ -216,10 +216,10 @@ const ProjectCard = () => {
 
             <Flex justify="center" gap={6} align="center">
               <Project1Modal />
-              <Link href=" https://chat-app-firebase-7rlx.vercel.app/">
+              <Link href=" https://chat-app-firebase-7rlx.vercel.app/" target="_blank">
                 <Button bg={btnbg} _hover={{bg:hoverBg}} >前往連結</Button>
               </Link>
-              <Link href="https://github.com/Lindahehexd/chat-app-firebase">
+              <Link href="https://github.com/Lindahehexd/chat-app-firebase" target="_blank">
                 <Button gap={1} fontSize="lg" bg={btnbg} _hover={{bg:hoverBg}} >
                   <Icon fontSize={30} as={AiFillGithub}></Icon>
                   Github
@@ -287,10 +287,10 @@ const ProjectCard = () => {
 
             <Flex justify="center" gap={6}>
               {/* <Button>查看內容</Button> */}
-              <Link href="https://coin-app-one.vercel.app/">
+              <Link href="https://coin-app-one.vercel.app/" target="_blank" >
                 <Button bg={btnbg} _hover={{bg:hoverBg}} >前往連結</Button>
               </Link>
-              <Link href=" https://github.com/Lindahehexd/coin-app">
+              <Link href=" https://github.com/Lindahehexd/coin-app" target="_blank" >
                 <Button gap={1} fontSize="lg" bg={btnbg} _hover={{bg:hoverBg}} >
                   <Icon fontSize={30} as={AiFillGithub}></Icon>
                   Github
@@ -360,11 +360,11 @@ const ProjectCard = () => {
             <Flex justify="center" gap={6}>
               {/* <Button>查看內容</Button> */}
 
-              <Link href="https://todo-list-zeta-jade.vercel.app/">
+              <Link href="https://todo-list-zeta-jade.vercel.app/" target="_blank">
                 <Button bg={btnbg} _hover={{bg:hoverBg}} >前往連結</Button>
               </Link>
 
-              <Link href=" https://github.com/Lindahehexd/Todo-List---">
+              <Link href=" https://github.com/Lindahehexd/Todo-List---" target="_blank">
                 <Button gap={1} fontSize="lg" bg={btnbg} _hover={{bg:hoverBg}} >
                   <Icon fontSize={30} as={AiFillGithub} ></Icon>
                   Github
@@ -434,10 +434,10 @@ const ProjectCard = () => {
 
             <Flex justify="center" gap={6}>
               {/* <Button>查看內容</Button> */}
-              <Link href=" https://media-label-calculator.vercel.app/">
+              <Link href=" https://media-label-calculator.vercel.app/" target="_blank">
                 <Button bg={btnbg} _hover={{bg:hoverBg}} >前往連結</Button>
               </Link>
-              <Link href=" https://github.com/Lindahehexd/Media-Label-Calculator">
+              <Link href=" https://github.com/Lindahehexd/Media-Label-Calculator" target="_blank">
                 <Button gap={1} fontSize="lg" bg={btnbg} _hover={{bg:hoverBg}} >
                   <Icon fontSize={30} as={AiFillGithub}></Icon>
                   Github
