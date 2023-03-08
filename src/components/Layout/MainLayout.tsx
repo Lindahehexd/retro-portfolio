@@ -26,7 +26,7 @@ const Layout = ({ children, isLoading }: LayoutProps) => {
     <>
       <Box>
         <Navbar />
-        <Center mt={{ base: 6, md: 4 }}>
+        <Center mt={{ base: '30px', md: 7 }}>
           {pathname === "/projects" && <Heading> 作品集</Heading>}
           {pathname === "/contact" && <Heading> 聯絡方式</Heading>}
         </Center>

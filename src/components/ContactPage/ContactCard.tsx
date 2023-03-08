@@ -9,19 +9,19 @@ const handleSendMail = () => {
 
 const ContactCard = () => {
   const border = useColorModeValue("3px solid black", "3px solid white");
-  const bg = useColorModeValue("gray.50", "gray.800");
+  const bg = useColorModeValue("gray.50", "#333333");
   const color = useColorModeValue("gray.900", "gray.900");
   const boxShadow = useColorModeValue("7px 7px black", "7px 7px");
   const hoverBg = useColorModeValue("pink.400", "pink.400");
 
   return (
     <>
-      <VStack spacing={10} p={2}>
+      <VStack spacing={10} p={4}>
         <Text fontWeight={700} fontSize="2xl">
           如果我有符合貴公司的條件的話，歡迎與我聯繫或聊聊，以下是我的資訊:{" "}
         </Text>
         <Flex w="100%" justify="center">
-          <Card bg="gray.800" mb={6} w="80%" border={border} boxShadow={boxShadow}>
+          <Card bg="gray.800" mb={6} w="100%" border={border} boxShadow={boxShadow}>
             <Box color="#FFCB6B" fontSize="xl" fontWeight={600} p={3}>
               <Text>
                 <span style={{ color: "#A4CBB4" }}>import</span> <span style={{ color: "#89DCFE" }}>WebDeveloper</span>{" "}
@@ -50,7 +50,7 @@ const ContactCard = () => {
                 <span style={{ color: "#89DCFE" }}> {"/>"}</span>
               </Text>
             </Box>
-            <Flex bg="gray.50" align="center" justify="center" borderTop="5px solid black">
+            <Flex  bg="gray.50" align="center" justify="center" borderTop="5px solid black">
               <Text color={color} fontSize="xl" fontWeight={700}>
                 聯絡方式
               </Text>
@@ -64,9 +64,9 @@ const ContactCard = () => {
           boxShadow={boxShadow}
           justify="center"
           align="center"
-          w="70%"
+          w="100%"
           direction="row"
-          h="100px"
+          h="60px"
           gap={5}
           bg={bg}
         >
