@@ -94,7 +94,7 @@ const AboutMeBox = () => {
 
             <Heading fontSize="5xl"> 技能 </Heading>
 
-            <SimpleGrid columns={{ sm: 3, md: 3, lg: 3 }} gap={3} mt={3}>
+            <SimpleGrid columns={{ sm: 3, md: 3, lg: 3 }} gap={3} mt={3} fontSize='lg' fontWeight={600}>
               <Flex justify="center" border={border} boxShadow={boxShadow} borderRadius="lg" _hover={{bg:bg}}>
                 Next.js{" "}
               </Flex>
