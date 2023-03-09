@@ -119,8 +119,8 @@ const ProjectCard = () => {
 
               <Text fontSize="lg" fontWeight={700}>
                 {" "}
-                結合PPT與Reddit,
-                使用者可以瀏覽看板、建立、加入、搜尋看板。並且可以發文、推文、噓文...等等。如果您是板主，甚至能客製化您的看板，包含圖片、看板簡介、看板標題。用戶也可對貼文點選喜歡或不喜歡，票數會即時顯示。此作品主要練習SSR、Type型別熟悉、使用狀態管理工具Recoil、擴展運算子、使用firebase達成CRUD...等等{" "}
+                結合PTT與Reddit,
+                使用者可以瀏覽看板、建立、加入、搜尋看板。並且可以發文、推文、噓文...等等。如果您是板主，甚至能客製化您的看板，包含圖片、看板簡介、看板標題。用戶也可對貼文點選喜歡或不喜歡，票數會即時顯示。此作品主要練習SSR、Type型別熟悉、使用狀態管理工具Recoil、擴展運算子、使用firebase達成CRUD...等等。{" "}
               </Text>
               {/* <Image src="/aboutme3.png" alt="" objectFit="contain" boxSize="250px" /> */}
             </CardBody>
@@ -211,7 +211,7 @@ const ProjectCard = () => {
               <Text fontSize="lg" fontWeight={700}>
                 聊天Go是一個任何人都可進入的公共聊天室，在聊天室中，您可以看到發訊息者的留言時間，
                 也能看到發訊息者的頭像。本作品主要練習使用firebase以及使用firebase提供的身份驗證方式進行登入。並練習使用Conditional
-                Rendering去渲染明亮模式/黑暗模式的顏色、以及有登入的用戶才可看到聊天室，
+                Rendering去渲染明亮模式/黑暗模式的顏色、以及有登入的用戶才可看到聊天室。
               </Text>
               {/* <Image src="/aboutme3.png" alt="" objectFit="contain" boxSize="250px" /> */}
             </CardBody>
@@ -284,7 +284,7 @@ const ProjectCard = () => {
               </Flex>
 
               <Text fontSize="lg" fontWeight={700}>
-                這是一個虛擬貨幣的即時百大排行榜，可以看到當前貨幣的最新資訊，包含名稱、價格、交易量，等等。本作品主要練習抓取API資料，並練習使用chart.js來呈現圖表。同時也練習react-router，熟悉跳頁方式的使用。另外也嘗試在撈資料時做Skeleton,提升使用者體驗
+                這是一個虛擬貨幣的即時百大排行榜，可以看到當前貨幣的最新資訊，包含名稱、價格、交易量，等等。本作品主要練習抓取API資料，並練習使用chart.js來呈現圖表。同時也練習react-router，熟悉跳頁方式的使用。另外也嘗試在撈資料時做Skeleton,提升使用者體驗。
               </Text>
               {/* <Image src="/aboutme3.png" alt="" objectFit="contain" boxSize="250px" /> */}
             </CardBody>
