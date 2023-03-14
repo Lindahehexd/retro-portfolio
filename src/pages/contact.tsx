@@ -1,10 +1,19 @@
 import ContactCard from "@/components/ContactPage/ContactCard";
 import ContentLayout from "@/components/Layout/ContentLayout";
+import Head from "next/head";
 
 
 export default function ContactPage() {
   return (
     <>
+     <Head>
+        <title>Contact_Da_Jiun</title>
+        <meta
+          name="description"
+          content="My contact infomation. 我的聯絡方式"
+        />
+        <meta property="og:image" content="/meta1.jpg" />
+      </Head>
     <ContentLayout>
       <>
       <ContactCard/>
