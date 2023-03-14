@@ -105,7 +105,7 @@ const AboutMeBox = () => {
                 >
                   網頁{" "}
                 </Tag>
-                了解更多{" "}
+                了解更多。{" "}
               </Text>
             </Text>
             <Heading fontSize="5xl"> 轉職的契機</Heading>
