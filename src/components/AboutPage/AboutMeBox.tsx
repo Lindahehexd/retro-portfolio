@@ -83,28 +83,28 @@ const AboutMeBox = () => {
 
           <Flex p={2} direction="column">
             <Flex>
-              <Heading fontSize="5xl" >
-                關於我
-              </Heading>
+              <Heading fontSize="5xl">關於我</Heading>
             </Flex>
             <Text my={3} fontSize="lg" fontWeight={600}>
               我叫大鈞，26歲，曾是技術文件工程師，專長在於將事物深入淺出，讓工程師或使用者都能快速上手產品。
               同時，我享受學習也享受解決問題，並且將其化為我的成就感。
               <Text fontSize="lg" fontWeight={600}>
                 關於我的過去與成就，歡迎透過我以前的
-                <Tag
-                  _hover={{ bg: hoverBg }}
-                  bg={bg}
-                  fontSize="lg"
-                  fontWeight={600}
-                  boxShadow={boxShadow}
-                  ml={1}
-                  mr={2}
-                  cursor="pointer"
-                  border={border}
-                >
-                  網頁{" "}
-                </Tag>
+                <Link href="https://dajiun-portfolio.netlify.app" target="_blank">
+                  <Tag
+                    _hover={{ bg: hoverBg }}
+                    bg={bg}
+                    fontSize="lg"
+                    fontWeight={600}
+                    boxShadow={boxShadow}
+                    ml={1}
+                    mr={2}
+                    cursor="pointer"
+                    border={border}
+                  >
+                    網頁{" "}
+                  </Tag>
+                </Link>
                 了解更多。{" "}
               </Text>
             </Text>
@@ -120,7 +120,10 @@ const AboutMeBox = () => {
               </Text>
             </Text>
 
-            <Heading fontSize="5xl" mb={3}> 技能 </Heading>
+            <Heading fontSize="5xl" mb={3}>
+              {" "}
+              技能{" "}
+            </Heading>
 
             <SimpleGrid columns={{ sm: 3, md: 3, lg: 3 }} gap={3} mt={3} fontSize="lg" fontWeight={600}>
               <Flex justify="center" border={border} boxShadow={boxShadow} borderRadius="lg" _hover={{ bg: bg }}>
