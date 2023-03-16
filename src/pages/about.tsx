@@ -5,19 +5,17 @@ import Head from "next/head";
 export default function ContactPage() {
   return (
     <>
-        <Head>
+      <Head>
         <title>About_Da_Jiun</title>
-        <meta
-          name="description"
-          content="About me. 關於我"
-        />
-        <meta property="og:image" content="/meta1.jpg" />
+        <meta name="description" content="About Me" />
+        <meta property="og:image" content="https://i.imgur.com/4zduMOF.png" />
       </Head>
+
       <ContentLayout>
         <>
-            {/* <About /> */}
-            <AboutMeBox />
-            {/* <Content /> */}
+          {/* <About /> */}
+          <AboutMeBox />
+          {/* <Content /> */}
         </>
       </ContentLayout>
     </>

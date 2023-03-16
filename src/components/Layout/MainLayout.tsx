@@ -2,6 +2,7 @@ import Navbar from "@/components/LayoutComponents/Navbar";
 import { Spinner, Center, Flex, Box, Heading } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import Footer from "../LayoutComponents/Footer";
 // import Footer from "../LayoutComponents/Footer";
 
 interface LayoutProps {
@@ -37,7 +38,6 @@ const Layout = ({ children, isLoading }: LayoutProps) => {
           </Center>
         )}
         <Box flex="1">{children}</Box>
-        {/* <Footer  /> */}
       </Box>
     </>
   );

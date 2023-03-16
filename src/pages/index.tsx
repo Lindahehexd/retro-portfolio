@@ -8,7 +8,7 @@ export default function Home() {
       <Head>
         <title>Home_Da_Jiun</title>
         <meta name="description" content="Hi there, this is Da-Jiun Lin's portfolio website.嗨～這是大鈞的個人網站" />
-        <meta property="og:image" content="/meta1.jpg" />
+        <meta property="og:image" content="https://i.imgur.com/4zduMOF.png" />
       </Head>
       <ContentLayout>
         <>

@@ -1,4 +1,16 @@
-import { Card, CardBody, Text, Flex, Button, SimpleGrid, Icon, useColorModeValue, Box, Image } from "@chakra-ui/react";
+import {
+  Card,
+  CardBody,
+  Text,
+  Flex,
+  Button,
+  SimpleGrid,
+  Icon,
+  useColorModeValue,
+  Box,
+  Image,
+  Tooltip,
+} from "@chakra-ui/react";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
 import { AiFillGithub } from "react-icons/ai";
 import Link from "next/link";
@@ -36,8 +48,6 @@ const ProjectCard = () => {
                 </Text>
                 {/* <Image src="/p1.png" alt="" my={2}></Image> */}
                 <SimpleGrid columns={{ base: 3, md: 3, lg: 5 }} spacing={2} mb={5}>
-     
-
                   <Flex
                     h="22px"
                     p={2}
@@ -117,7 +127,6 @@ const ProjectCard = () => {
                   >
                     <Text>Chakra UI</Text>
                   </Flex>
-
                 </SimpleGrid>
               </Flex>
 
@@ -132,15 +141,19 @@ const ProjectCard = () => {
             <Flex justify="center" gap={6}>
               {/* <Button >查看內容</Button> */}
               <Link href="https://pttit.vercel.app/" target="_blank">
-                <Button bg={btnbg} _hover={{ bg: hoverBg }}>
-                  前往連結
-                </Button>
+                <Tooltip label="let's go" color="white" bg="gray.700" boxShadow="3px 3px orange" placement="top">
+                  <Button bg={btnbg} _hover={{ bg: hoverBg }}>
+                    前往連結
+                  </Button>
+                </Tooltip>
               </Link>
               <Link href="https://github.com/Lindahehexd/Pttit" target="_blank">
-                <Button fontSize="lg" bg={btnbg} _hover={{ bg: hoverBg }}>
-                  <Icon fontSize={30} as={AiFillGithub}></Icon>
-                  Github
-                </Button>
+                <Tooltip label="watch details" color="white" bg="gray.700" boxShadow="3px 3px orange" placement="top">
+                  <Button fontSize="lg" bg={btnbg} _hover={{ bg: hoverBg }}>
+                    <Icon fontSize={30} as={AiFillGithub}></Icon>
+                    Github
+                  </Button>
+                </Tooltip>
               </Link>
             </Flex>
           </Card>
@@ -162,8 +175,6 @@ const ProjectCard = () => {
                   聊天GO
                 </Text>
                 <SimpleGrid columns={{ base: 3, md: 3, lg: 5 }} spacing={2} mb={5}>
-   
-
                   <Flex
                     h="22px"
                     p={2}
@@ -211,7 +222,6 @@ const ProjectCard = () => {
                   >
                     <Text>Chakra UI</Text>
                   </Flex>
-
                 </SimpleGrid>
               </Flex>
 
@@ -226,15 +236,19 @@ const ProjectCard = () => {
             <Flex justify="center" gap={6} align="center">
               <Project1Modal />
               <Link href="https://chat-app-Firebase-7rlx.vercel.app/" target="_blank">
-                <Button bg={btnbg} _hover={{ bg: hoverBg }}>
-                  前往連結
-                </Button>
+                <Tooltip label="let's go" color="white" bg="gray.700" boxShadow="3px 3px orange" placement="top">
+                  <Button bg={btnbg} _hover={{ bg: hoverBg }}>
+                    前往連結
+                  </Button>
+                </Tooltip>
               </Link>
               <Link href="https://github.com/Lindahehexd/chat-app-Firebase" target="_blank">
-                <Button gap={1} fontSize="lg" bg={btnbg} _hover={{ bg: hoverBg }}>
-                  <Icon fontSize={30} as={AiFillGithub}></Icon>
-                  Github
-                </Button>
+                <Tooltip label="watch details" color="white" bg="gray.700" boxShadow="3px 3px orange" placement="top">
+                  <Button gap={1} fontSize="lg" bg={btnbg} _hover={{ bg: hoverBg }}>
+                    <Icon fontSize={30} as={AiFillGithub}></Icon>
+                    Github
+                  </Button>
+                </Tooltip>
               </Link>
             </Flex>
           </Card>
@@ -256,8 +270,6 @@ const ProjectCard = () => {
                   Shopping Cart
                 </Text>
                 <SimpleGrid columns={{ base: 3, md: 3, lg: 5 }} spacing={2} mb={5}>
-                
-
                   <Flex
                     h="22px"
                     p={2}
@@ -321,7 +333,6 @@ const ProjectCard = () => {
                   >
                     <Text>Chakra UI</Text>
                   </Flex>
-
                 </SimpleGrid>
               </Flex>
 
@@ -335,15 +346,19 @@ const ProjectCard = () => {
             <Flex justify="center" gap={6}>
               {/* <Button >查看內容</Button> */}
               <Link href="https://next-chakra-shopping-cart.vercel.app/" target="_blank">
-                <Button bg={btnbg} _hover={{ bg: hoverBg }}>
-                  前往連結
-                </Button>
+                <Tooltip label="let's go" color="white" bg="gray.700" boxShadow="3px 3px orange" placement="top">
+                  <Button bg={btnbg} _hover={{ bg: hoverBg }}>
+                    前往連結
+                  </Button>
+                </Tooltip>
               </Link>
               <Link href="https://github.com/Lindahehexd/next-chakra-shopping-cart" target="_blank">
-                <Button fontSize="lg" bg={btnbg} _hover={{ bg: hoverBg }}>
-                  <Icon fontSize={30} as={AiFillGithub}></Icon>
-                  Github
-                </Button>
+                <Tooltip label="watch details" color="white" bg="gray.700" boxShadow="3px 3px orange" placement="top">
+                  <Button fontSize="lg" bg={btnbg} _hover={{ bg: hoverBg }}>
+                    <Icon fontSize={30} as={AiFillGithub}></Icon>
+                    Github
+                  </Button>
+                </Tooltip>
               </Link>
             </Flex>
           </Card>
@@ -365,8 +380,6 @@ const ProjectCard = () => {
                   Coin Tracker
                 </Text>
                 <SimpleGrid columns={{ base: 3, md: 3, lg: 5 }} spacing={2} mb={5}>
-                
-
                   <Flex
                     h="22px"
                     p={2}
@@ -383,7 +396,6 @@ const ProjectCard = () => {
                     <Text>React</Text>
                   </Flex>
 
-                  
                   <Flex
                     h="22px"
                     p={2}
@@ -400,7 +412,6 @@ const ProjectCard = () => {
                     <Text>Chart.js</Text>
                   </Flex>
 
-
                   <Flex
                     h="22px"
                     p={2}
@@ -416,7 +427,6 @@ const ProjectCard = () => {
                   >
                     <Text>Chakra UI</Text>
                   </Flex>
-
                 </SimpleGrid>
               </Flex>
 
@@ -429,15 +439,19 @@ const ProjectCard = () => {
             <Flex justify="center" gap={6}>
               {/* <Button>查看內容</Button> */}
               <Link href="https://coin-app-one.vercel.app/" target="_blank">
-                <Button bg={btnbg} _hover={{ bg: hoverBg }}>
-                  前往連結
-                </Button>
+                <Tooltip label="let's go" color="white" bg="gray.700" boxShadow="3px 3px orange" placement="top">
+                  <Button bg={btnbg} _hover={{ bg: hoverBg }}>
+                    前往連結
+                  </Button>
+                </Tooltip>
               </Link>
               <Link href="https://github.com/Lindahehexd/coin-app" target="_blank">
-                <Button gap={1} fontSize="lg" bg={btnbg} _hover={{ bg: hoverBg }}>
-                  <Icon fontSize={30} as={AiFillGithub}></Icon>
-                  Github
-                </Button>
+                <Tooltip label="watch details" color="white" bg="gray.700" boxShadow="3px 3px orange" placement="top">
+                  <Button gap={1} fontSize="lg" bg={btnbg} _hover={{ bg: hoverBg }}>
+                    <Icon fontSize={30} as={AiFillGithub}></Icon>
+                    Github
+                  </Button>
+                </Tooltip>
               </Link>
             </Flex>
           </Card>
@@ -459,8 +473,6 @@ const ProjectCard = () => {
                   Todo List
                 </Text>
                 <SimpleGrid columns={{ base: 3, md: 3, lg: 5 }} spacing={2} mb={5}>
-                 
-
                   <Flex
                     h="22px"
                     p={2}
@@ -492,7 +504,6 @@ const ProjectCard = () => {
                   >
                     <Text>Chakra UI</Text>
                   </Flex>
-
                 </SimpleGrid>
               </Flex>
 
@@ -507,16 +518,20 @@ const ProjectCard = () => {
               {/* <Button>查看內容</Button> */}
 
               <Link href="https://todo-list-zeta-jade.vercel.app/" target="_blank">
-                <Button bg={btnbg} _hover={{ bg: hoverBg }}>
-                  前往連結
-                </Button>
+                <Tooltip label="let's go" color="white" bg="gray.700" boxShadow="3px 3px orange" placement="top">
+                  <Button bg={btnbg} _hover={{ bg: hoverBg }}>
+                    前往連結
+                  </Button>
+                </Tooltip>
               </Link>
 
               <Link href="https://github.com/Lindahehexd/Todo-List---" target="_blank">
-                <Button gap={1} fontSize="lg" bg={btnbg} _hover={{ bg: hoverBg }}>
-                  <Icon fontSize={30} as={AiFillGithub}></Icon>
-                  Github
-                </Button>
+                <Tooltip label="watch details" color="white" bg="gray.700" boxShadow="3px 3px orange" placement="top">
+                  <Button gap={1} fontSize="lg" bg={btnbg} _hover={{ bg: hoverBg }}>
+                    <Icon fontSize={30} as={AiFillGithub}></Icon>
+                    Github
+                  </Button>
+                </Tooltip>
               </Link>
             </Flex>
           </Card>
@@ -538,8 +553,6 @@ const ProjectCard = () => {
                   碳帶紙捲計算器
                 </Text>
                 <SimpleGrid columns={{ base: 3, md: 3, lg: 5 }} spacing={2} mb={5}>
-          
-
                   <Flex
                     h="22px"
                     p={2}
@@ -571,7 +584,6 @@ const ProjectCard = () => {
                   >
                     <Text>CSS</Text>
                   </Flex>
-
                 </SimpleGrid>
               </Flex>
 
@@ -586,15 +598,19 @@ const ProjectCard = () => {
             <Flex justify="center" gap={6}>
               {/* <Button>查看內容</Button> */}
               <Link href="https://media-label-calculator.vercel.app/" target="_blank">
-                <Button bg={btnbg} _hover={{ bg: hoverBg }}>
-                  前往連結
-                </Button>
+                <Tooltip label="let's go" color="white" bg="gray.700" boxShadow="3px 3px orange" placement="top">
+                  <Button bg={btnbg} _hover={{ bg: hoverBg }}>
+                    前往連結
+                  </Button>
+                </Tooltip>
               </Link>
               <Link href="https://github.com/Lindahehexd/Media-Label-Calculator" target="_blank">
-                <Button gap={1} fontSize="lg" bg={btnbg} _hover={{ bg: hoverBg }}>
-                  <Icon fontSize={30} as={AiFillGithub}></Icon>
-                  Github
-                </Button>
+                <Tooltip label="watch details" color="white" bg="gray.700" boxShadow="3px 3px orange" placement="top">
+                  <Button gap={1} fontSize="lg" bg={btnbg} _hover={{ bg: hoverBg }}>
+                    <Icon fontSize={30} as={AiFillGithub}></Icon>
+                    Github
+                  </Button>
+                </Tooltip>
               </Link>
             </Flex>
           </Card>
