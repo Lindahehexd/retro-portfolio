@@ -4,7 +4,7 @@ const TypeEffect = () => {
   return (
     <Typewriter
       options={{
-        strings: ["曾是技術文件工程師", "正往前端工程師邁進"],
+        strings: ["A Technical Writer", "A Frontend Deveploper"],
         autoStart: true,
         loop: true,
       }}
