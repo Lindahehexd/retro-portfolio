@@ -142,7 +142,7 @@ const AboutMeBox = () => {
                 Recoil{" "}
               </Flex>
               <Flex justify="center" border={border} boxShadow={boxShadow} borderRadius="lg" _hover={{ bg: bg }}>
-                Redux{" "}
+                Git{" "}
               </Flex>
               <Flex justify="center" border={border} boxShadow={boxShadow} borderRadius="lg" _hover={{ bg: bg }}>
                 Chakra UI{" "}

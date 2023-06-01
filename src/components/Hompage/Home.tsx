@@ -1,6 +1,6 @@
 import { Flex, Text, Heading, SimpleGrid, Button, Card, CardBody, Image, Icon } from "@chakra-ui/react";
 import { Wrap, WrapItem } from "@chakra-ui/react";
-import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
+import { AiFillLinkedin, AiFillGithub, AiFillMediumSquare } from "react-icons/ai";
 import { SiGmail } from "react-icons/si";
 import { useColorModeValue } from "@chakra-ui/react";
 import TypeEffect from "./TypeEffect";
@@ -68,6 +68,9 @@ const HomeItem = () => {
               </Link>
               <Link href="https://github.com/Lindahehexd">
                 <Icon fontSize={40} as={AiFillGithub} cursor="pointer"  color={iconBg}  _hover={{color:iconHoverBg}}/>
+              </Link>
+              <Link href="https://medium.com/@tkd09152129">
+                <Icon fontSize={40} as={AiFillMediumSquare} cursor="pointer"  color={iconBg}  _hover={{color:iconHoverBg}}/>
               </Link>
             </Flex>
           </CardBody>
