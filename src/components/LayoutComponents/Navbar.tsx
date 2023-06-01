@@ -59,9 +59,12 @@ const Navbar = () => {
       >
         {/* <Flex bg='teal' w='100%' justify='space-between' align="center"> */}
 
-        <Text fontSize="2xl" fontWeight="bold">
-          Da-Jiun Lin
-        </Text>
+        <Link href="/">
+          <Text fontSize="2xl" fontWeight="bold">
+            Da-Jiun Lin
+          </Text>
+        </Link>
+
         {isMobile ? (
           <IconButton
             bg={iconBg}
@@ -101,22 +104,46 @@ const Navbar = () => {
         <Box pb={4} mt={8} w="100vw" zIndex={20}>
           <VStack spacing={4} alignItems="center">
             <Link href="/">
-              <Button border={border} boxShadow={boxShadow} _hover={{ bg: hoverBg }} onClick={onToggle} minW={200}>
+              <Button
+                border={border}
+                boxShadow={boxShadow}
+                _hover={{ bg: hoverBg }}
+                onClick={onToggle}
+                minW={200}
+              >
                 首頁
               </Button>
             </Link>
             <Link href="projects">
-              <Button border={border} boxShadow={boxShadow} _hover={{ bg: hoverBg }} onClick={onToggle} minW={200}>
+              <Button
+                border={border}
+                boxShadow={boxShadow}
+                _hover={{ bg: hoverBg }}
+                onClick={onToggle}
+                minW={200}
+              >
                 作品集
               </Button>
             </Link>
             <Link href="/about">
-              <Button border={border} boxShadow={boxShadow} _hover={{ bg: hoverBg }} onClick={onToggle} minW={200}>
+              <Button
+                border={border}
+                boxShadow={boxShadow}
+                _hover={{ bg: hoverBg }}
+                onClick={onToggle}
+                minW={200}
+              >
                 關於我
               </Button>
             </Link>
             <Link href="/contact">
-              <Button border={border} boxShadow={boxShadow} _hover={{ bg: hoverBg }} onClick={onToggle} minW={200}>
+              <Button
+                border={border}
+                boxShadow={boxShadow}
+                _hover={{ bg: hoverBg }}
+                onClick={onToggle}
+                minW={200}
+              >
                 聯絡方式
               </Button>
             </Link>
