@@ -70,7 +70,7 @@ const ContactCard = () => {
           gap={5}
           bg={bg}
         >
-          <Link href="https://www.linkedin.com/in/da-jiun-lin-47a5841a1/">
+          <Link href="https://www.linkedin.com/in/da-jiun-l-47a5841a1/">
             <Icon fontSize={40} as={AiFillLinkedin} cursor="pointer" _hover={{color:hoverBg}} />
           </Link>
           <Link href="https://github.com/Lindahehexd">
