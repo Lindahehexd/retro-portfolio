@@ -54,7 +54,7 @@ const AboutMeBox = () => {
             {/* Content of the first component */}
             <Card
               boxShadow={useColorModeValue("8px  8px black", "8px 8px   white")}
-              bg={useColorModeValue("#FCE2FF", "#e5ff73")}
+              bg={useColorModeValue("#FCE2FF", "#d9f1c6")}
               border={border}
               h="400px"
               justify="center"
@@ -62,7 +62,7 @@ const AboutMeBox = () => {
               mt={{ base: 1, md: 8 }}
               mr={{ base: "none", md: 8 }}
             >
-              <Image src="/profile2.png" alt="" objectFit="contain" boxSize="250px" />
+              <Image src="/aboutme4.png" alt="" objectFit="contain" boxSize="250px" />
             </Card>
             <Flex justify="center" mt={5}>
               <Button
@@ -83,44 +83,44 @@ const AboutMeBox = () => {
 
           <Flex p={2} direction="column">
             <Flex>
-              <Heading fontSize="5xl">關於我</Heading>
+              <Heading size="xl">關於我</Heading>
             </Flex>
             <Text my={3} fontSize="lg" fontWeight={600}>
-              我叫大鈞，26歲，曾是技術文件工程師，專長在於將事物深入淺出，讓工程師或使用者都能快速上手產品。
+              我叫大鈞，26歲，喜歡自學前端新知的技術文件工程師，專長在於將事物深入淺出，讓工程師或使用者都能快速上手產品。
               同時，我享受學習也享受解決問題，並且將其化為我的成就感。
               <Text fontSize="lg" fontWeight={600}>
-                關於我的過去與成就，歡迎透過我以前的
+                此個人網站主要展示前端相關作品，如果你想了解我的文件風格，歡迎至我的
                 <Link href="https://dajiun-portfolio.netlify.app" target="_blank">
                   <Tag
                     _hover={{ bg: hoverBg }}
                     bg={bg}
                     fontSize="lg"
                     fontWeight={600}
+                    color={useColorModeValue("black", "white")}
                     boxShadow={boxShadow}
                     ml={1}
                     mr={2}
                     cursor="pointer"
                     border={border}
                   >
-                    網頁{" "}
+                    文件作品空間{" "}
                   </Tag>
                 </Link>
                 了解更多。{" "}
               </Text>
             </Text>
-            <Heading fontSize="5xl"> 寫程式的動機</Heading>
+            <Heading size="xl"> 接觸到前端的瞬間</Heading>
             <br></br>
             <Text mb={3} fontSize="lg" fontWeight={600}>
-              除了享受打字與撰寫文件的樂趣，我渴望解決更多問題。在職業生涯中，我希望持續學習新知識，而成為網頁工程師可以讓我結合自己的興趣和專業背景，
+              除了享受打字與撰寫文件的樂趣，我渴望解決更多問題。在職業生涯中，我希望持續學習新知識，而前端領域可以讓我結合自己的興趣和專業背景，讓我不管是在工作上或是在學習上都
               所以在職中便開始自學。
               <Text mt={3}>
                 在一次因緣際會下，我為公司寫個一個小的應用程式。雖然在當時不是我的本業，但這小作品卻帶給我無比的成就感。
-                我確定我喜歡的是一份能從中獲得成就感、具有挑戰性的工作，並持續感受到自己正不斷地進步、變強。
-                在前公司鼓勵下，離職後便全程自學。
+                我更加確定我很享受獲得成就感、挑戰且不斷學習的感覺。並且能持續感受到自己正不斷地進步、變強。
               </Text>
             </Text>
 
-            <Heading fontSize="5xl" mb={3}>
+            <Heading size="xl" mb={3}>
               {" "}
               技能{" "}
             </Heading>

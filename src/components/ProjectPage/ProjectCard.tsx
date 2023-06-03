@@ -456,10 +456,109 @@ const ProjectCard = () => {
             </Flex>
           </Card>
 
-          <Card bg={cardBg1} h="100%" maxW="600px" color={color} border={border} boxShadow={boxShadow}>
+          <Card boxShadow={boxShadow} bg={cardBg1} h="100%" maxW="600px" color={color} border={border}>
             <Flex p={3} borderBottom="5px solid black" justify="space-between">
               <Text fontSize="xl" fontWeight={800}>
                 PROJECT 5
+              </Text>
+
+              <Flex>
+                <Icon as={FaRegArrowAltCircleRight} fontSize={30} />
+              </Flex>
+            </Flex>
+            {/* body */}
+            <CardBody>
+              <Flex direction="column">
+                <Text fontSize="4xl" fontWeight={800} mb={2}>
+                  Simple Login with i18n
+                </Text>
+                {/* <Image src="/p1.png" alt="" my={2}></Image> */}
+                <SimpleGrid columns={{ base: 3, md: 3, lg: 5 }} spacing={2} mb={5}>
+ 
+
+                  <Flex
+                    h="22px"
+                    p={2}
+                    boxShadow="4px 4px black"
+                    border="3px solid black"
+                    borderRadius="md"
+                    color="white"
+                    fontSize="xs"
+                    bg="blue.600"
+                    justify="center"
+                    align="center"
+                    fontWeight={600}
+                  >
+                    <Text>React</Text>
+                  </Flex>
+
+                  <Flex
+                    h="22px"
+                    p={2}
+                    boxShadow="4px 4px black"
+                    border="3px solid black"
+                    borderRadius="md"
+                    color="white"
+                    fontSize="xs"
+                    bg="orange.500"
+                    justify="center"
+                    align="center"
+                    fontWeight={600}
+                  >
+                    <Text>Firebase</Text>
+                  </Flex>
+
+                  <Flex
+                    h="22px"
+                    p={2}
+                    boxShadow="4px 4px black"
+                    border="3px solid black"
+                    borderRadius="md"
+                    color="white"
+                    fontSize="xs"
+                    bg="teal.400"
+                    justify="center"
+                    align="center"
+                    fontWeight={600}
+                  >
+                    <Text>Chakra UI</Text>
+                  </Flex>
+
+                </SimpleGrid>
+              </Flex>
+
+              <Text fontSize="lg" fontWeight={600}>
+                {" "}
+                練習使用react-router + firebase註冊登入 + i18n，做出一個簡單的登入頁面。使用者可以選擇登入或註冊，並且可以選擇語言。登入後會顯示使用者的名稱及相關資料，並且可以登出。
+              </Text>
+              {/* <Image src="/aboutme3.png" alt="" objectFit="contain" boxSize="250px" /> */}
+            </CardBody>
+
+            <Flex justify="center" gap={6}>
+              {/* <Button >查看內容</Button> */}
+              <Link href="https://react-login-i18n.vercel.app" target="_blank">
+                <Tooltip label="let's go" color="white" bg="gray.700" boxShadow="3px 3px orange" placement="top">
+                  <Button bg={btnbg} _hover={{ bg: hoverBg }}>
+                    前往連結
+                  </Button>
+                </Tooltip>
+              </Link>
+              <Link href="https://github.com/Lindahehexd/React-Login-i18n" target="_blank">
+                <Tooltip label="watch details" color="white" bg="gray.700" boxShadow="3px 3px orange" placement="top">
+                  <Button fontSize="lg" bg={btnbg} _hover={{ bg: hoverBg }}>
+                    <Icon fontSize={30} as={AiFillGithub}></Icon>
+                    Github
+                  </Button>
+                </Tooltip>
+              </Link>
+            </Flex>
+          </Card>
+
+
+          <Card bg={cardBg2} h="100%" maxW="600px" color={color} border={border} boxShadow={boxShadow}>
+            <Flex p={3} borderBottom="5px solid black" justify="space-between">
+              <Text fontSize="xl" fontWeight={800}>
+                PROJECT 6
               </Text>
 
               <Flex>
@@ -536,10 +635,10 @@ const ProjectCard = () => {
             </Flex>
           </Card>
 
-          <Card bg={cardBg2} h="100%" maxW="600px" color={color} border={border} boxShadow={boxShadow}>
+          <Card bg={cardBg1} h="100%" maxW="600px" color={color} border={border} boxShadow={boxShadow}>
             <Flex p={3} borderBottom="5px solid black" justify="space-between">
               <Text fontSize="xl" fontWeight={800}>
-                PROJECT 6
+                PROJECT 7
               </Text>
 
               <Flex>
