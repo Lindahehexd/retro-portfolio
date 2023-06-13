@@ -64,7 +64,7 @@ const AboutMeBox = () => {
             >
               <Image src="/aboutme4.png" alt="" objectFit="contain" boxSize="250px" />
             </Card>
-            <Flex justify="center" mt={5}>
+            {/* <Flex justify="center" mt={5}>
               <Button
                 onClick={handleDownload}
                 boxShadow={boxShadow}
@@ -78,7 +78,7 @@ const AboutMeBox = () => {
               >
                 下載履歷
               </Button>
-            </Flex>
+            </Flex> */}
           </Box>
 
           <Flex p={2} direction="column">
@@ -110,13 +110,13 @@ const AboutMeBox = () => {
               </Text>
             </Text>
             <Heading size="xl"> 接觸到前端的瞬間</Heading>
-            <br></br>
+            {/* <br></br> */}
             <Text mb={3} fontSize="lg" fontWeight={600}>
-              除了享受打字與撰寫文件的樂趣，我渴望解決更多問題。在職業生涯中，我希望持續學習新知識，而前端領域可以讓我結合自己的興趣和專業背景，
-              所以在職中便開始自學。
+              {/* 除了享受打字與撰寫文件的樂趣，我渴望解決更多問題。在職業生涯中，我希望持續學習新知識，而前端領域可以讓我結合自己的興趣和專業背景，
+              所以在職中便開始自學。 */}
               <Text mt={3}>
                 在一次因緣際會下，我為公司寫個一個小的應用程式。雖然在當時不是我的本業，但這小作品卻帶給我無比的成就感。
-                我更加確定我很享受獲得成就感、挑戰且不斷學習的感覺。並且能持續感受到自己正不斷地進步、變強。我也希望未來能寫出一些讓大家都看得懂的技術新知，讓所有想學習的人都能快速上手。
+                我更加確定我很享受獲得成就感、挑戰且不斷學習的感覺。並且能持續感受到自己正不斷地進步、變強。我也希望能結合專業，未來能寫出一些讓大家都看得懂的技術新知，讓所有想學習的人都能快速上手。
               </Text>
             </Text>
 
